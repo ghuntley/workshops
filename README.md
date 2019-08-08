@@ -1,1 +1,1 @@
-# nixos-workshop
+# nix-workshop
