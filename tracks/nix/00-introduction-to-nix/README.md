@@ -1,1 +1,2 @@
-https://qfpl.io/posts/nix/getting-started-with-nix/
+- https://qfpl.io/posts/nix/introducing-nix/
+- https://qfpl.io/posts/nix/getting-started-with-nix/
