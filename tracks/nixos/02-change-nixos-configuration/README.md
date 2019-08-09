@@ -1,5 +1,4 @@
-# Change NixOS Configuration
-
+# Overview
 
 As described in the introduction, NixOS is a GNU/Linux distribution with a
 declarative system configuration manager. The whole operating system is built by
@@ -110,3 +109,5 @@ to activate the new configuration on. As always, check `man nixos-rebuild`.
 ## Now type this:
 
 @@TODO(JC) Think of useful exercises/examples in changing the configuration.
+
+## What's next
