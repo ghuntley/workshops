@@ -1,4 +1,6 @@
-# Install NixOS
+# Overview
+
+Install NixOS
 
 
 ## Full install onto real hardware or a VirtualBox VM
@@ -81,3 +83,5 @@ Exit your editor and, still as root, run the following command:
 Now your VM should be able to use avahi (check by running `ping dymaxion.local`
 and the first source for binary packages will be the workshop proxy-cache).
 We'll see how all of this works in the next section.
+
+## What's next
