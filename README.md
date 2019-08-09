@@ -11,6 +11,6 @@
 
 
 # License
-This workshop was created by Geoffrey Huntley and Javier Candeira who have released it under the Creative Commons Attribution 4.0 International License.
+This workshop was created by Geoffrey Huntley and Javier Candeira who have released it under the [Creative Commons Attribution 4.0 International License](LICENSE).
 
 
