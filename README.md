@@ -10,12 +10,6 @@
 - https://github.com/peti/hex2017
 - https://github.com/qfpl/reflex-workshop/blob/master/nix/vm.nix
 
-# Contributors
-
-# License
-
-This workshop is available under the [Creative Commons Attribution 4.0 International License](LICENSE). If you use this material to conduct your own workshop, please share feedback by creating a new issue on GitHub. If you see an opportunity to improve the courseware please send in a pull-request with the improvement.
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -32,3 +26,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+This workshop is available under the [Creative Commons Attribution 4.0 International License](LICENSE). If you use this material to conduct your own workshop, please share feedback by creating a new issue on GitHub. If you see an opportunity to improve the courseware please send in a pull-request with the improvement.
+
