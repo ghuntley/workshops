@@ -11,6 +11,5 @@
 
 
 # License
-This workshop was created by Geoffrey Huntley and Javier Candeira who have released it under the [Creative Commons Attribution 4.0 International License](LICENSE).
 
-
+This workshop is available under the [Creative Commons Attribution 4.0 International License](LICENSE). If you use this material to conduct your own workshop, please share feedback by creating a new issue on GitHub. If you see an opportunity to improve the courseware please send in a pull-request with the improvement.
