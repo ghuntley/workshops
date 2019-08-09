@@ -1,4 +1,7 @@
-# Introduction
+# Overview
+
+## Introduction
+
 
 (NOTE TO GEOFF: TEMPTED TO JUST COPY chunks the NixOS about page here, I think it's CC 4.0 as well)
 
@@ -18,3 +21,5 @@ Glossary:
 - derivation
 - "sets" as understood in nix language are unordered collections of key value pairs.
 - 
+
+## What's next
