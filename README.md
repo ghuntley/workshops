@@ -1,5 +1,5 @@
 # nix-workshop
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 
 # see also
@@ -25,6 +25,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.ghuntley.com/now"><img src="https://avatars0.githubusercontent.com/u/127353?v=4" width="100px;" alt="Geoffrey Huntley"/><br /><sub><b>Geoffrey Huntley</b></sub></a><br /><a href="https://github.com/ghuntley/nix-workshop/commits?author=ghuntley" title="Code">💻</a> <a href="https://github.com/ghuntley/nix-workshop/commits?author=ghuntley" title="Documentation">📖</a> <a href="#talk-ghuntley" title="Talks">📢</a> <a href="https://github.com/ghuntley/nix-workshop/commits?author=ghuntley" title="Tests">⚠️</a></td>
+    <td align="center"><a href="http://hiperactivo.com/"><img src="https://avatars1.githubusercontent.com/u/91694?v=4" width="100px;" alt="Javier Candeira"/><br /><sub><b>Javier Candeira</b></sub></a><br /><a href="https://github.com/ghuntley/nix-workshop/commits?author=candeira" title="Code">💻</a> <a href="https://github.com/ghuntley/nix-workshop/commits?author=candeira" title="Documentation">📖</a> <a href="#talk-candeira" title="Talks">📢</a> <a href="https://github.com/ghuntley/nix-workshop/commits?author=candeira" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
