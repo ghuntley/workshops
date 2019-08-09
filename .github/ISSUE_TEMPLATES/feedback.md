@@ -1,7 +1,7 @@
 ---
 name: Feedback
 about: Share feedback 💖
-labels: kind/feedback, triage/untriaged
+labels: feedback, untriaged
 ---
 
 <!-- Thanks for stopping on by to share feedback 💖
