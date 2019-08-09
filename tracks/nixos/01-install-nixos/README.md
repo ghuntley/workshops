@@ -33,7 +33,8 @@ work properly:
   1. System/Motherboard: Raise memory to 4GB, or some rebuild operations might fail.
   1. Network/Adapter2: Ensure you have your host laptop's wifi card as "Attached to: Bridged Adapter"
   1. USB: Disable USB 2.0 and enable 1.1 instead. Some VirtualBox installations won't have the host extensions.
-1. Run the appliance by right-clicking on it, then selecting "Start -> Detachable Start"
+1. Run the appliance by right-clicking on it, then selecting "Start ->
+   Detachable Start"
 1. Open a terminal and gain root access with the password "demo".
 
 
@@ -47,8 +48,17 @@ bottlenecked by external network access. We'll have to configure that in your
 VMs. We've also configured the proxy-cache server to use the mdns name
 dymaxion.local, so you'll have to configure your VMs to use avahi/mdns.
 
-In the root terminal you opened in the previous point, please edit
-`/etc/nixos/configuration.nix` (both nano and vim are available) and add the
+A NixOS sytem is defined by a configuration file located at
+`/etc/nixos/configuration.nix`. In the VirtualBox appliance, it's write
+protected. In the root terminal you opened in the previous point, make it
+writable:
+
+   ```
+   # chmod 644 /etc/nixos/configuration.nix
+   ```
+
+Now you can edit the file (both nano and vim are available) and add the
+
 following lines:
 
     ```
