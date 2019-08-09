@@ -1,7 +1,7 @@
 ---
 name: Enhancement Request
 about: Suggest an enhancement
-labels: kind/enhancement, triage/untriaged
+labels: enhancement, untriaged
 ---
 
 <!-- Please only use this template for submitting enhancement requests -->
