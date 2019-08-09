@@ -16,6 +16,18 @@
         "talk",
         "test"
       ]
+    },
+    {
+      "login": "candeira",
+      "name": "Javier Candeira",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/91694?v=4",
+      "profile": "http://hiperactivo.com/",
+      "contributions": [
+        "code",
+        "doc",
+        "talk",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
