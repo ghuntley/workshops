@@ -1,6 +1,6 @@
 # Overview
 
-## Introduction
+## Introduction to NixOS
 
 
 (NOTE TO GEOFF: TEMPTED TO JUST COPY chunks the NixOS about page here, I think it's CC 4.0 as well)
