@@ -11,8 +11,7 @@
 
 ## Contributing
 
-* If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue](https://github.com/ghuntley/nix-workshop/issues/new/choose) on GitHub. 
-* If you see an opportunity to improve the courseware please send in a pull-request.
+If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue](https://github.com/ghuntley/nix-workshop/issues/new/choose) on GitHub. If you see an opportunity to improve the courseware please send in a pull-request.
 
 ## Contributors ✨
 
