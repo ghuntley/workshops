@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ghuntley",
+      "name": "Geoffrey Huntley",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/127353?v=4",
+      "profile": "https://www.ghuntley.com/now",
+      "contributions": [
+        "code",
+        "doc",
+        "talk",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "nix-workshop",
+  "projectOwner": "ghuntley",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

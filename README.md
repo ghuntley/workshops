@@ -1,4 +1,5 @@
 # nix-workshop
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 
 # see also
@@ -14,3 +15,19 @@
 # License
 
 This workshop is available under the [Creative Commons Attribution 4.0 International License](LICENSE). If you use this material to conduct your own workshop, please share feedback by creating a new issue on GitHub. If you see an opportunity to improve the courseware please send in a pull-request with the improvement.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://www.ghuntley.com/now"><img src="https://avatars0.githubusercontent.com/u/127353?v=4" width="100px;" alt="Geoffrey Huntley"/><br /><sub><b>Geoffrey Huntley</b></sub></a><br /><a href="https://github.com/ghuntley/nix-workshop/commits?author=ghuntley" title="Code">💻</a> <a href="https://github.com/ghuntley/nix-workshop/commits?author=ghuntley" title="Documentation">📖</a> <a href="#talk-ghuntley" title="Talks">📢</a> <a href="https://github.com/ghuntley/nix-workshop/commits?author=ghuntley" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
