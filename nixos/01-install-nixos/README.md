@@ -37,8 +37,7 @@ work properly:
   1. USB: Disable USB 2.0 and enable 1.1 instead. Some VirtualBox installations won't have the host extensions.
 1. Run the appliance by right-clicking on it, then selecting `Start ->
    Detachable Start`
-1. Open a terminal and gain root access with the password "demo".
-
+1. Open a terminal and gain root access with the password `demo`.
 
 ## Some housekeeping for the Melbourne :: Compose 2019 Workshop
 
