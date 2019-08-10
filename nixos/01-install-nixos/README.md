@@ -30,13 +30,13 @@ Please pay attention to the instructions, because otherwise your VM might not
 work properly:
 
 1. Download https://releases.nixos.org/nixos/19.03/nixos-19.03.173251.56d94c8c69f/nixos-19.03.173251.56d94c8c69f-x86_64-linux.ova
-1. Import it into VirtualBox using the menu option ""File -> Import Appliance"
+1. Import it into VirtualBox using the menu option `File -> Import Appliance`
 1. Before running the appliance, go into the settings and change the following details:
-  1. System/Motherboard: Raise memory to 4GB, or some rebuild operations might fail.
-  1. Network/Adapter2: Ensure you have your host laptop's wifi card as "Attached to: Bridged Adapter"
+  1. System/Motherboard: Raise memory to 5GB, or some rebuild operations might fail.
+  1. Network/Adapter2: Ensure you have your host laptop's wifi card as `Attached to: Bridged Adapter`
   1. USB: Disable USB 2.0 and enable 1.1 instead. Some VirtualBox installations won't have the host extensions.
-1. Run the appliance by right-clicking on it, then selecting "Start ->
-   Detachable Start"
+1. Run the appliance by right-clicking on it, then selecting `Start ->
+   Detachable Start`
 1. Open a terminal and gain root access with the password "demo".
 
 
