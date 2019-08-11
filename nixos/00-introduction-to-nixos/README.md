@@ -19,7 +19,7 @@ Glossary:
 - substituters
 - expression
 - derivation
-- "sets" as understood in nix language are unordered collections of key value pairs.
+- "sets" as understood in nix language are unordered collections of key value pairs. Quick explain of sets and recursive sets.
 - 
 
 ## What's next

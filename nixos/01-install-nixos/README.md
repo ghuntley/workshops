@@ -88,9 +88,6 @@ Now your VM should be able to use avahi (check by running `ping dymaxion.local`
 and the first source for binary packages will be the workshop proxy-cache).
 We'll see how all of this works in the next section.
 
-(NOTE: this is may not true without a reboot, probably an artifact of how
-networking works under VB, because it did work on a non-virtualised system)
-(TODO: find workaround)
 
 ## Now type this
 
@@ -116,9 +113,6 @@ networking works under VB, because it did work on a non-virtualised system)
     as if you'd booted with the avahi/local cacheproxy configuration, but
     without adding a new configuration to your type menu.
   
-(NOTE: this is may not true without a reboot, probably an artifact of how
-networking works under VB, because it did work on a non-virtualised system)
-(TODO: find workaround)
 
 ## Maybe type this later
 
@@ -132,5 +126,6 @@ networking works under VB, because it did work on a non-virtualised system)
   - For instance, you may need to run `nixos-rebuild --option substituter
     https://cache.nixos.org/ switch` in when you move away from our
     `dymaxion.local` proxy after you leave the workshop.
+
 
 ## What's next
