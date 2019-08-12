@@ -13,16 +13,20 @@
         ```
   - 03-roll-back-configuration
   - 04-introducing-the-nixstore
+    - Request: please give me a summary and I can write this one and exercises.
   - 05-introducing-channels-and-nixpkgs
+    - Request: please give me a summary and I can write this one and exercises.
   - 06-continuous-integration
   - 07-deployment
   - 08-integration-testing
   - 09-server-farms
 - nix
  - 00-introduction-to-nix
+     - Javier dibs this one
  - 01-the-nix-language
      - Javier dibs this one.
  - 02-using-nix
+     - Question: do you mean using nix the package manager? As if you install Nix on Ubuntu/MacOS?
  - 03-building-applications
    - dotnet-example
    - golang-example
