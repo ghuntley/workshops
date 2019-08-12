@@ -1,2 +1,3 @@
 - https://qfpl.io/posts/nix/introducing-nix/
 - https://qfpl.io/posts/nix/getting-started-with-nix/
+- https://nixos.org/nixos/nix-pills/
