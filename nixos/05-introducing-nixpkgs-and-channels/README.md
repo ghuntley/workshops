@@ -12,19 +12,26 @@ Channels are labeled `stable`, `unstable`, or with a specific version number, e.
 
 For this article, let’s use the unstable channel—it’s not as dated as stable, nor as recent as the git checkout. To subscribe to the unstable channel, run:
 
-$ nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+```bash
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+```
+
 This fetches the channel labeled nixpkgs-unstable from nixos.org, then installs it to your user profile.
 
 To browse the list of channels, go [here](https://nixos.org/channels/).
 
 Using the example above, to install emem, run the following commands for NixOS and other systems, respectively:
 
-$ nix-env -iA nixos.emem
-$ nix-env -iA nixpkgs.emem
+```bash
+nix-env -iA nixos.emem
+nix-env -iA nixpkgs.emem
+```
+
 To update your channels, run:
 
-$ nix-channel --update
-
+```bash
+nix-channel --update
+```
 
 
 # What's Next
