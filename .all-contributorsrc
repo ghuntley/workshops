@@ -28,6 +28,16 @@
         "talk",
         "test"
       ]
+    },
+    {
+      "login": "ebzzry",
+      "name": "Rommel MARTINEZ",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7875?v=4",
+      "profile": "https://ebzzry.io",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
