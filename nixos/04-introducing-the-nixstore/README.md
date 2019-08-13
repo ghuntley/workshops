@@ -21,3 +21,6 @@ $ nix-collect-garbage
 
 
 # What's Next
+
+# References and Acknowledgements
+- [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)
