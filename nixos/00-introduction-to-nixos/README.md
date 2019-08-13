@@ -12,7 +12,8 @@ NixOS does not follow the [FHS](https://en.wikipedia.org/wiki/Filesystem_Hierarc
 
 ## What's next
 
-
+# References and Acknowledgements
+- [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)
 
 ## cutting room floor
 
