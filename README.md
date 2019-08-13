@@ -31,7 +31,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Thanks
-- [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/)
+- Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/)
 
 ## License
 
