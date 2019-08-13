@@ -43,7 +43,7 @@ nix-channel --update
 1. To list all your installed packages, $ nix-env -q --installed
 1. To list all available packages, $ nix-env -q --available
 
+# What's Next
+
 # References and Acknowledgements
 - [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)
-
-# What's Next
