@@ -33,5 +33,13 @@ To update your channels, run:
 nix-channel --update
 ```
 
+# Activities
+
+1. Clone nixpkgs, install a package from it.
+1. Visit list of available channels website
+1. Show configured channel, add unstable channel, `nix-channel --update`, install package from unstable.
+1. To uninstall a package via $ nix-env -e emem
+1. To list all your installed packages, $ nix-env -q --installed
+1. To list all available packages, $ nix-env -q --available
 
 # What's Next
