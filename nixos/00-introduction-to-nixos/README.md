@@ -10,6 +10,12 @@ NixOS is a Linux distribution that solves these problems by leveraging on the de
 
 NixOS does not follow the [FHS](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard). This gives room for a lot of flexibility and ingenuity. It does not have `/usr/` and `/opt/`. It does have `/bin/` and `/usr/bin/`, which contains only `sh` and `env`, respectively — both of which are actually symlinks to the real programs somewhere in `/nix/store/`. The top-level location for system binaries — the ones installed explicitly by the administrator—are located in `/run/current-system/sw/bin/` and `/run/current-system/sw/sbin/`. User-installed programs, on the other hand, are available at their respective `~/.nix-profile/bin/`. These locations cannot be modified through normal means; dedicated programs must be used to write to these trees.
 
+## What's next
+
+
+
+## cutting room floor
+
 (NOTE TO GEOFF: TEMPTED TO JUST COPY chunks the NixOS about page here, I think it's CC 4.0 as well)
 
 Notes:
@@ -28,5 +34,3 @@ Glossary:
 - derivation
 - "sets" as understood in nix language are unordered collections of key value pairs. Quick explain of sets and recursive sets.
 - 
-
-## What's next
