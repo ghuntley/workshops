@@ -1,6 +1,6 @@
 # Introduction to NixOS
 
-## 🗹 Overview
+## 📖 Overview
 
 This workshop provides a walkthrough of installing, configuring and administrating NixOS. Each module contains some background information on major features and concepts in NixOS, and includes activities to apply what you have learned.
 
@@ -23,7 +23,7 @@ NixOS is a Linux distribution that solves these problems by leveraging on the de
 
 NixOS does not follow the [FHS][fhs-standard]. This gives room for a lot of flexibility and ingenuity. It does not have `/usr/` and `/opt/`. It does have `/bin/` and `/usr/bin/`, which contains only `sh` and `env`, respectively — both of which are actually symlinks to the real programs somewhere in `/nix/store/`. The top-level location for system binaries — the ones installed explicitly by the administrator—are located in `/run/current-system/sw/bin/` and `/run/current-system/sw/sbin/`. User-installed programs, on the other hand, are available at their respective `~/.nix-profile/bin/`. These locations cannot be modified through normal means; dedicated programs must be used to write to these trees.
 
-## 📖 Recap
+## 🗹 Recap
 
 1. You don’t need to install additional software to manage system configuration. Desired state configuration is built into the operating system, removing the need for configuration management tools such as Chef, Puppet or Ansible.
 1. Configuration of the operating system is defined in a single declarative configuration file at  `/etc/nixos/configuration.nix`
