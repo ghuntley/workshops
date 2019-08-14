@@ -37,6 +37,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## License
 
-This workshop is available under [Creative Commons Attribution-ShareAlike 4.0 International
-](LICENSE). If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue](https://github.com/ghuntley/nix-workshop/issues/new/choose) on GitHub. If you see a opportunity to improve the courseware please send in a pull-request.
+This workshop is available under [CC-BY-SA-4.0](LICENSE). If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue](https://github.com/ghuntley/nix-workshop/issues/new/choose) on GitHub. If you see a opportunity to improve the courseware please send in a pull-request.
 
