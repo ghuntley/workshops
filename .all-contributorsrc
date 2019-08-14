@@ -38,6 +38,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "jameshfisher",
+      "name": "James Harrison Fisher",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/166966?v=4",
+      "profile": "https://jameshfisher.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
