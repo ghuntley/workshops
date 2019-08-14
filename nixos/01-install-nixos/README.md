@@ -2,6 +2,9 @@
 
 Install NixOS
 
+# ✋ Before You Begin
+
+
 
 ## Full install onto real hardware or a VirtualBox VM
 
