@@ -39,4 +39,4 @@ These workshops are made available under the [CC-BY-SA-4.0][license]. If you use
 
 <!-- in-line links -->
 [license]: LICENSE.md
-[share-feedback]: https://github.com/ghuntley/nix-workshop/issues/new?labels=feedback%2C+untriaged&template=feedback.md
+[share-feedback]: https://github.com/ghuntley/workshops/issues/new?labels=feedback%2C+untriaged&template=feedback.md

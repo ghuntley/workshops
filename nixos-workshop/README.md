@@ -4,13 +4,6 @@
 
 ## Topics Covered
 
-* Initial developer setup and getting started
-* The most productive way to develop an application
-* Building an iOS, Android and WebAssembly application with Uno
-* Building rich, responsive UI on mobile and web
-* Usage of platform native views and intermixing them
-* How Uno works under the hood
-* Source level debugging and how to monkey patch Uno’s internals
  
 ## Computer Setup
 
@@ -29,10 +22,14 @@ Throughout the workshop you'll encounter the following emoji — here's what the
 * 📚 Additional reading material.
 * ⏭️️ Recap of the current module and what to expect in the next module
 
+## Contributing
+
+If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue][share-feedback] on GitHub. If you see a opportunity to improve the course ware please send in a pull-request.
+
 ## License
 
 These workshops are made available under the [CC-BY-SA-4.0][license]. If you use this material to conduct your own workshop, please share where it was used and [feedback by creating a new issue on GitHub][share-feedback]. If you see a opportunity to improve the course ware please send in a pull-request.
 
 <!-- in-line links -->
 [license]: ../LICENSE.md
-[share-feedback]: https://github.com/ghuntley/nix-workshop/issues/new?labels=feedback%2C+untriaged&template=feedback.md
+[share-feedback]: https://github.com/ghuntley/workshops/issues/new?labels=feedback%2C+untriaged&template=feedback.md
