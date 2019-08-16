@@ -1,3 +1,32 @@
+Let's enable X11 with KDE5 and network manager:
+
+```nix
+networking.networkmanager.enable = true;
+services.xserver.displayManager.sddm.enable = true;
+services.xserver.desktopManager.plasma5.enable = true;
+```
+
+In addition to these core configuration items, you might want to install some packages to get you started. Your NixOS install will be very bare without them. Packages can be specified as additional configuration items, and there should be a commented out section of configuration that you can uncomment and edit. For example, a fairly modest set of packages would look something like this:
+
+```nix
+environment.systemPackages = (with pkgs; [
+  firefox
+  git
+  htop
+  networkmanagerapplet
+  nix-prefetch-scripts
+  nix-repl
+  vim
+  wget
+  which
+]);
+```
+
+As the comment in the configuration file tells you, you can search for packages to install with `nix-env -qaP | grep $PACKAGE`.
+
+
+
+
 ## Now type this
 
 - Install git with `nix-env -iA nixos.git`. This is not the preferred way to install software on NixOS, but it's a quick and easy fix, and good to know

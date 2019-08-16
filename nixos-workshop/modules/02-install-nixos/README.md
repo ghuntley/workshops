@@ -184,32 +184,6 @@ If you are installing NixOS as your primary operating system, now would be a goo
 networking.wireless.enable = true;
 ```
 
-Let's enable X11 with KDE5 and network manager:
-
-```nix
-networking.networkmanager.enable = true;
-services.xserver.displayManager.sddm.enable = true;
-services.xserver.desktopManager.plasma5.enable = true;
-```
-
-In addition to these core configuration items, you might want to install some packages to get you started. Your NixOS install will be very bare without them. Packages can be specified as additional configuration items, and there should be a commented out section of configuration that you can uncomment and edit. For example, a fairly modest set of packages would look something like this:
-
-```nix
-environment.systemPackages = (with pkgs; [
-  firefox
-  git
-  htop
-  networkmanagerapplet
-  nix-prefetch-scripts
-  nix-repl
-  vim
-  wget
-  which
-]);
-```
-
-As the comment in the configuration file tells you, you can search for packages to install with `nix-env -qaP | grep $PACKAGE`.
-
 Finally, it’s not a good idea to use root all the time, so to create your user, add/uncomment something like the following. In the example below, we’ll create a user called `demo`. We’ll give them a home directory and add them to a few groups. Most importantly, you probably want your user to be a member of wheel so they can run privileged commands with sudo.
 
 ```nix
