@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "bierner.github-markdown-preview",
+        "editorconfig.editorconfig",
+        "davidanson.vscode-markdownlint",
+        "jebbs.plantuml",
+        "streetsidesoftware.code-spell-checker",
+    ]
+}
