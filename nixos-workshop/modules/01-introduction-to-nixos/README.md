@@ -1,6 +1,5 @@
 # Introduction to NixOS
 
-
 ## 📖 Overview
 
 This workshop provides a walk through of installing, configuring and administrating the GNU/Linux operating system NixOS. Each module contains some background information on major features and concepts in NixOS, and includes activities to apply what you have learned.

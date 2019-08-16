@@ -1,3 +1,27 @@
+## Now type this
+
+- Install git with `nix-env -iA nixos.git`. This is not the preferred way to install software on NixOS, but it's a quick and easy fix, and good to know
+so you can keep working.
+- Initialise a git repo on `/etc/nixos` with `# cd /etc/nixos && git init &&
+git add . && git commit -m "Initial comit"`. Now you can track your changes
+to your NixOS configuration.
+- Notice that git is available to the root user, but not to your demo user.
+This is because they are different environments, and by using `nix-env` you
+only installed on root's user profile, not on the system.
+- Reboot your VirtualBox appliance and, on the Grub screen, select the `NixOS
+-- All Configurations` menu and, after that, select `Configuration 1`.
+You'll reboot in a NixOS system without avahi and the local binary caches
+we've set up for this workshop. Test that this is true by running `ping
+dymaxion.local`.
+- Now check that booting an earlier generation of your system didn't change
+the filesystem. Type `head /etc/nixos/configuration.nix` and you'll see the
+avahi and binaryChanges edits you made are still there.
+- We do want your system to use the local cache, so please rebuild your
+running system with `sudo nixos-rebuild --test`. This will leave your system
+as if you'd booted with the avahi/local cacheproxy configuration, but
+without adding a new configuration to your type menu.
+
+
 # Overview
 
 As described in the introduction, NixOS is a GNU/Linux distribution with a
