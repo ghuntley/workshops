@@ -25,7 +25,7 @@ Throughout the workshop you'll encounter the following emoji — here's what the
 
 ## Thanks
 
-* Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/), [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/) and the [NixOS manual](https://nixos.org/nixos/manual/).
+* Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/), [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/), [Installing NixOS](https://qfpl.io/posts/installing-nixos/) and the [NixOS manual](https://nixos.org/nixos/manual/).
 
 ## Contributing
 
