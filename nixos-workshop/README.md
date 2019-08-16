@@ -8,7 +8,7 @@ This workshop provides a walk through of installing, configuring and administrat
 
 ## Computer Setup
 
-Attendees will need computer with [virtual box installed][developer-environment-setup].
+If you are doing this workshop as part of a classroom, it is important to download the [prerequisites and configure your computer][prerequisites] before attendance as you'll need to download upwards of 4Gb of software from the internet. If you are installing NixOS on computer as it's primary operating system then you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso].
 
 ## Legend
 
@@ -25,7 +25,7 @@ Throughout the workshop you'll encounter the following emoji — here's what the
 
 ## Thanks
 
-* Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/) and [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/).
+* Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/), [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/) and the [NixOS manual](https://nixos.org/nixos/manual/).
 
 ## Contributing
 
@@ -36,5 +36,7 @@ If you use this material to conduct your own workshop, please [share where it wa
 These workshops are made available under the [CC-BY-SA-4.0][license]. If you use this material to conduct your own workshop, please share where it was used and [feedback by creating a new issue on GitHub][share-feedback]. If you see a opportunity to improve the course ware please send in a pull-request.
 
 <!-- in-line links -->
+[burn-the-iso]: https://nixos.org/nixos/manual/index.html#sec-booting-from-usb
+[prerequisites]: ./00-prerequisites/README.md
 [license]: ../LICENSE.md
 [share-feedback]: https://github.com/ghuntley/workshops/issues/new?labels=feedback%2C+untriaged&template=feedback.md

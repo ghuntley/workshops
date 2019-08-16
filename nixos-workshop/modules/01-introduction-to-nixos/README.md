@@ -1,6 +1,5 @@
 # Introduction to NixOS
 
-![NixOS logo](nixos-logo.png)
 
 ## 📖 Overview
 
@@ -19,15 +18,15 @@ How many times have you had a broken operating system because you upgraded a sof
 
 Ideas that change the way we do computing come rarely. A lot of the technology that we are using now are just re-hashes of old ones, layers upon layers of cosmetics enveloping old concepts. Entire product lines are based upon this lack of creativity and ingenuity. Old problems are not solved. Instead, these so-called innovative solutions merely pass around the problem while painting it with new shades, claiming that at least, they made it more colorful.
 
+![NixOS logo](nixos-logo.png) 
+
 NixOS is a GNU/Linux distribution that solves these problems by leveraging on the determinism of the [Nix package manager][nix-workshop] and by using a single declarative configuration file that contains all settings and knobs in one place — [/etc/nixos/configuration.nix][nixos-generate-default-config]. This file contains information about your file-systems, users, services, network configuration, input devices, kernel parameters, and more. You can take someone's configuration.nix and recreate their exact operating system configuration state!
 
 In NixOS you don’t have to fiddle around with the whole system manually to obtain the configuration that you want. You don’t have to use ad-hoc solutions to specify a desired configuration state. You don’t need to install additional software to manage system configuration.
 
 NixOS has atomic upgrades and rollbacks. It’s always safe to try an upgrade or configuration change: if things go wrong, you can always roll back to the previous configuration. Declarative specs and safe upgrades make NixOS a great system for DevOps use.
 
-One of the primary differences you'll notice in NixOS when comparing it other GNU/Linux distributions is that NixOS does not follow the [Filesystem Hierarchy Standard][fhs-standard].
-
-NixOS does not have `/usr/` and `/opt/`. NixOS does have `/bin/` and `/usr/bin/`, which contains only `sh` and `env`, respectively — both of which are actually symlinks to the real programs somewhere in `/nix/store/`.
+One of the primary differences you'll notice in NixOS when comparing it other GNU/Linux distributions is that NixOS does not follow the [Filesystem Hierarchy Standard][fhs-standard]. NixOS does not have `/usr/` and `/opt/`. NixOS does have `/bin/` and `/usr/bin/`, which contains only `sh` and `env`, respectively — both of which are actually symlinks to the real programs somewhere in `/nix/store/`.
 
 The top-level location for system binaries — the ones installed explicitly by the administrator are located in `/run/current-system/sw/bin/` and `/run/current-system/sw/sbin/`. User-installed programs, on the other hand, are available at their respective `~/.nix-profile/bin/`. These locations cannot be modified through normal means; dedicated programs must be used to write to these trees.
 
