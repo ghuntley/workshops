@@ -2,9 +2,10 @@
 
 ## Overview
 
+This workshop provides a walk through of installing, configuring and administrating NixOS. Each module contains some background information on major features and concepts in NixOS, and includes activities to apply what you have learned.
+
 ## Topics Covered
 
- 
 ## Computer Setup
 
 Attendees will need computer with [virtual box installed][developer-environment-setup].
@@ -21,6 +22,10 @@ Throughout the workshop you'll encounter the following emoji — here's what the
 * ☑️ A handy checklist that guarantees successful outcomes.
 * 📚 Additional reading material.
 * ⏭️️ Recap of the current module and what to expect in the next module
+
+## Thanks
+
+* Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/) and [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/).
 
 ## Contributing
 

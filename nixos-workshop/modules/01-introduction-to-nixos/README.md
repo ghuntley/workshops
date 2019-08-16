@@ -2,7 +2,7 @@
 
 ## 📖 Overview
 
-This workshop provides a walkthrough of installing, configuring and administrating NixOS. Each module contains some background information on major features and concepts in NixOS, and includes activities to apply what you have learned.
+This workshop provides a walk through of installing, configuring and administrating NixOS. Each module contains some background information on major features and concepts in NixOS, and includes activities to apply what you have learned.
 
 By the end of this module you will:
 
@@ -11,7 +11,7 @@ By the end of this module you will:
 * Discover that configuration management tools are not required.
 * Discover that `sudo` is no longer required.
 
-## 💡 What is NixOS?
+## 💡 What is NixOS
 
 Ideas that change the way we do computing come rarely. A lot of the technology that we are using now are just re-hashes of old ones—layers upon layers of cosmetics enveloping old concepts. Entire product lines are based upon this lack of creativity and ingenuity. Old problems are not solved. Instead, these so-called innovative solutions merely pass around the problem while painting it with new shades, claiming that at least, they made it more colorful. This mentality harms progress in innumerable ways. This gives the false impression that solutions are actually being done. This creates a false sense of assurance of improvements.
 
@@ -35,5 +35,5 @@ NixOS does not follow the [FHS][fhs-standard]. This gives room for a lot of flex
 In [the next module][next-module] you'll install NixOS either on computer as it's primary operating system or in a virtual machine on your computer. Each module from here onwards you'll learn about NixOS concepts and how to manage NixOS.
 
 <!-- in-line links -->
-[fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard 
+[fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
 [next-module]: (../01-install-nixos/README.md)
