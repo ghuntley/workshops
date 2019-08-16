@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "bbenoist.nix",
         "bierner.github-markdown-preview",
         "editorconfig.editorconfig",
         "davidanson.vscode-markdownlint",

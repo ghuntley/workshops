@@ -180,8 +180,7 @@ More options allow you to declare remote builders, change profiles (GRUB
 submenus) to install your new configuration at, and even target a different host
 to activate the new configuration on. As always, check `man nixos-rebuild`.
 
-
-## Now type this:
+## Now type this
 
 Let's add some applications to your NixOS install. But within reason, you don't want
 to spend all the workshop downloading! Here are some things we recommend you
@@ -190,19 +189,18 @@ install now.
 Please gain root in your NixOS system with `sudo su`, edit
 `/etc/nixos/configuration.nix` and add the following:
 
-```
+```nix
 environment.systemPackages = with pkgs; [
   wget htop tree screen file psmisc
   fd ripgrep
   git
   xorg.xkill
 ];
-
 ```
 
 Since we're at it, why not add your own user?
 
-```
+```nix
 users.extraUsers.YOUR_USERNAME = {
   isNormalUser = true;
   description = "NAME SURNAME";
@@ -216,6 +214,5 @@ users.extraUsers.YOUR_USERNAME = {
 Now run `nixos-rebuild --switch` so the new configuration takes root.
 
 And you can try `# su YOUR_USERNAME` and become your new user. Remember to set a password with `passwd`.
-
 
 ## What's next
