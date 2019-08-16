@@ -7,7 +7,7 @@ This workshop provides a walk through of installing, configuring and administrat
 By the end of this module you will have:
 
 * Booted into NixOS
-* Generated an initial [/etc/nixos/configuration.nix][nixos-generate-default-config] config and customized it.
+* Generated an initial [/etc/nixos/configuration.nix][nixos-generate-default-config] config and minimally customized it.
 * Installed NixOS onto real hardware or into a VirtualBox virtual machine.
 
 ## ✋ Before You Begin
@@ -235,7 +235,9 @@ You'll need to do two steps:
 chmod 644 /etc/nixos/configuration.nix
 vi /etc/nixos/configuration.nix
 ```
+
 Add the following lines:
+
 ```nix
 services.avahi.enable = true;
 services.avahi.nssmdns = true;
@@ -271,6 +273,15 @@ nix.binaryCaches = [
 ```
 
 Now run `ping dymaxion.local` to confirm that avahi is functioning and the proxy-cache is accessible.
+
+> 🛈 You can declare your `binaryCaches` on the command line. The option is called `substituters`. During the workshop, have a play around with:
+>
+> ```bash
+> nixos-rebuild --option substituter https://cache.nixos.org/ test
+> nixos-rebuild --option substituter $LOCAL_CACHE_PROXY_IP test
+> ```
+>
+> Knowing this can be a lifesaver if you stuff up your `binareCaches` configuration and you need to know this because you'll need to run `nixos-rebuild --option substituter https://cache.nixos.org/ switch` after you leave the workshop as the `dymaxion.local` proxy-cache will no longer be accessible.
 </p>
 </details>
 
@@ -279,9 +290,10 @@ Now run `ping dymaxion.local` to confirm that avahi is functioning and the proxy
 Once you’re happy with your configuration, we can pull the trigger on an install.
 
 ```bash
-# IT'LL ASK YOU FOR YOUR ROOT PASSWORD - DON'T FORGET IT
 nixos-install
-
+# IT'LL ASK YOU FOR YOUR ROOT PASSWORD - DON'T FORGET IT
+# IT'LL ASK YOU FOR YOUR ROOT PASSWORD - DON'T FORGET IT
+# IT'LL ASK YOU FOR YOUR ROOT PASSWORD - DON'T FORGET IT
 reboot
 ```
 
@@ -298,21 +310,13 @@ nixos-install
 
 Assuming your system has booted to a login screen, you’re going to want to set your user’s password so you don’t login to your graphical environment as root. To do this, press Ctrl-Alt-F1 to open a terminal, login as root, and run `passwd $USER`, replacing `$USER` with the name of the user you configured. Once set, run `reboot` to reboot your machine and login as your regular user.
 
-## Maybe type this later
+## 📚 Additional reading material
 
-  - You can always declare your `binaryCaches` on the command line, where the
-    option is called `substituters`. During the workshop, maybe try
-    `nixos-rebuild --option substituter https://cache.nixos.org/ test` and
-    `nixos-rebuild --option substituter $LOCAL_CACHE_PROXY_IP test`. It may look
-    like it's doing nothing now if the rebuild operation doesn't require network
-    access, but it can be a lifesaver if you stuff up your `binareCaches`
-    configuration. 
-  - For instance, you may need to run `nixos-rebuild --option substituter
-    https://cache.nixos.org/ switch` in when you move away from our
-    `dymaxion.local` proxy after you leave the workshop.
+* [Instructions for booting from an Ubuntu liveCD and installing NixOS on a machine](https://gist.github.com/chris-martin/4ead9b0acbd2e3ce084576ee06961000).
+* [Installating NixOS with encrypted root](https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134).
+* [Installing NixOS on Hetzner bare metal with ZFS](https://ghuntley.com/notes/hetzner/).
 
-
-## What's next
+## ⏭️ What's next
 
 <!-- in-line links -->
 [burn-the-iso]: https://nixos.org/nixos/manual/index.html#sec-booting-from-usb
