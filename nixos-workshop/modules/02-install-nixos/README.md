@@ -184,20 +184,7 @@ If you are installing NixOS as your primary operating system, now would be a goo
 networking.wireless.enable = true;
 ```
 
-Finally, it’s not a good idea to use root all the time, so to create your user, add/uncomment something like the following. In the example below, we’ll create a user called `demo`. We’ll give them a home directory and add them to a few groups. Most importantly, you probably want your user to be a member of wheel so they can run privileged commands with sudo.
-
-```nix
-users.extraUsers.demo = {
-  createHome = true;
-  extraGroups = ["wheel" "video" "audio" "disk" "networkmanager"];
-  group = "users";
-  home = "/home/demo";
-  isNormalUser = true;
-  uid = 1000;
-};
-```
-
-<details><summary>✋🎯️ At the Melbourne :: Compose 2019 Workshop we are running a NixOS proxy-cache for the workshop so that the class doesn't become bottle necked by internet access speeds. The proxy-cache server name is discoverable by the mdns name <code>dymaxion.local</code>. Expand this section for configuration instructions.
+<details><summary>✋🎯️ At the Melbourne :: C◦mp◦se 2019 Workshop we are running a NixOS proxy-cache for the workshop so that the class doesn't become bottle necked by internet access speeds. The proxy-cache server name is discoverable by the mdns name <code>dymaxion.local</code>. Expand this section for configuration instructions.
 </summary>
 <p>
 
@@ -281,8 +268,6 @@ mount /dev/nixos-vg/root /mnt
 vim /mnt/etc/nixos/configuration.nix
 nixos-install
 ```
-
-Assuming your system has booted to a login screen, you’re going to want to set your user’s password so you don’t login to your graphical environment as root. To do this, press Ctrl-Alt-F1 to open a terminal, login as root, and run `passwd $USER`, replacing `$USER` with the name of the user you configured. Once set, run `reboot` to reboot your machine and login as your regular user.
 
 ## 📚 Additional reading material
 

@@ -1,4 +1,54 @@
-Let's enable X11 with KDE5 and network manager:
+# Change NixOS Configuration
+
+## 📖 Overview
+
+As described in the introduction, NixOS is a GNU/Linux distribution with a
+declarative system configuration manager. The whole operating system is built by
+the Nix package manager from a description in a purely functional language, also
+called Nix. For the purpose of this section, we'll consider the Nix language as a black box,
+and we'll treat `configuration.nix` as a configuration file with a slightly
+alien syntax.
+
+For those at the Melbourne :: C◦mp◦se 2019 workshop:
+
+* We've already changed the configuration in our NixOS system to ensure we can use mdns and to set up a local proxy-cache to download packages from. We did it in two steps: we edited the `configuration.nix` file and we ran the `nixos-rebuild` command.
+
+By the end of this module you will have:
+
+* Saved your progress so far using the DevOps principal of "Infrastructure as Code".
+* Further customized your operating system configuration.
+* Tested your operating system configuration.
+* Applied your operating system configuration.
+* Commited ("switched") your operating system configuration.
+* Learned about generations and discovered how to rollback to a last good via GRUB.
+
+## 🎯 Infrastructure as Code
+
+Let's save your progress so far!
+
+Run `nix-env -iA nixos.git` to make git available. This command does not globally install git, instead git is installed into `~/.nix-profile/bin/` of the root user. Here you are reaping the rewards of NixOS not following the [Filesystem Hierarchy Standard][fhs-standard]. On other GNU/Linux distributions git would have been installed globally and that would be the system wide version for all users. 
+
+With NixOS, you can side-by-side multiple versions of the same software for any user without stomping on other users. You get one of the benefits of docker, but without overhead, complexity and instability.
+
+Let's initialize a git repository and create a checkpoint:
+
+```bash
+cd /etc/nixos
+git init
+git add -A
+git commit -m "initial commit"
+```
+
+## 🎯 Customising NixOS
+
+Let's further customise NixOS:
+
+```bash
+# Or, you know, use `nano` or whatever else you might prefer.
+vi /etc/nixos/configuration.nix
+```
+
+Enable X11 with KDE5 and network manager:
 
 ```nix
 networking.networkmanager.enable = true;
@@ -6,7 +56,9 @@ services.xserver.displayManager.sddm.enable = true;
 services.xserver.desktopManager.plasma5.enable = true;
 ```
 
-In addition to these core configuration items, you might want to install some packages to get you started. Your NixOS install will be very bare without them. Packages can be specified as additional configuration items, and there should be a commented out section of configuration that you can uncomment and edit. For example, a fairly modest set of packages would look something like this:
+In addition to these core configuration items, you might want to install some packages to get you started. Your NixOS install is currently really bare. You can search for packages to install with `nix-env -qaP | grep $PACKAGE`. Add any additional packages that catch your fancy.
+
+Add the following packages at minimum to your configuration:
 
 ```nix
 environment.systemPackages = (with pkgs; [
@@ -19,64 +71,64 @@ environment.systemPackages = (with pkgs; [
   vim
   wget
   which
+  tmux
 ]);
 ```
 
-As the comment in the configuration file tells you, you can search for packages to install with `nix-env -qaP | grep $PACKAGE`.
 
+Finally, it’s not a good idea to use root all the time, so let's create a `workshop` user with a home directory and add the user to a few groups. Most importantly, let's add the user to be a member of `wheel` so that the account can run privileged commands (`nixos-rebuild` and `reboot`) with sudo.
 
+```nix
+users.extraUsers.workshop = {
+  createHome = true;
+  extraGroups = ["wheel" "video" "audio" "disk" "networkmanager"];
+  group = "users";
+  home = "/home/workshop";
+  isNormalUser = true;
+  uid = 1000;
+};
+```
 
+Now set a password for the workshop account via `passwd workshop`.
 
-## Now type this
+## 🎯 Reboot NixOS and interrupt booting when at the GRUB menu
 
-- Install git with `nix-env -iA nixos.git`. This is not the preferred way to install software on NixOS, but it's a quick and easy fix, and good to know
-so you can keep working.
-- Initialise a git repo on `/etc/nixos` with `# cd /etc/nixos && git init &&
-git add . && git commit -m "Initial comit"`. Now you can track your changes
-to your NixOS configuration.
-- Notice that git is available to the root user, but not to your demo user.
-This is because they are different environments, and by using `nix-env` you
-only installed on root's user profile, not on the system.
-- Reboot your VirtualBox appliance and, on the Grub screen, select the `NixOS
--- All Configurations` menu and, after that, select `Configuration 1`.
-You'll reboot in a NixOS system without avahi and the local binary caches
-we've set up for this workshop. Test that this is true by running `ping
-dymaxion.local`.
-- Now check that booting an earlier generation of your system didn't change
-the filesystem. Type `head /etc/nixos/configuration.nix` and you'll see the
-avahi and binaryChanges edits you made are still there.
-- We do want your system to use the local cache, so please rebuild your
-running system with `sudo nixos-rebuild --test`. This will leave your system
-as if you'd booted with the avahi/local cacheproxy configuration, but
-without adding a new configuration to your type menu.
+Notice you are at generation 1.
+Notice that no changes have been applied.
 
+## 🎯 Test the operating system configuration
 
-# Overview
+"fix up any compilation errors as need be"
 
-As described in the introduction, NixOS is a GNU/Linux distribution with a
-declarative system configuration manager. The whole operating system is built by
-the Nix package manager from a description in a purely functional language, also
-called Nix.
+"save your progress in git"
 
-For the purpose of this section, we'll consider the Nix language as a black box,
-and we'll treat `configuration.nix` as a configuration file with a slightly
-alien syntax.
+## 🎯 Apply the operating system configuration
 
+"apply is not commit". pull out power cable to save the day!
 
-## For those at the Melbourne :: Compose 2019 workshop
+## 🎯 Reboot NixOS
 
-We've already changed the configuration in our NixOS system to ensure we can use
-mdns and to set up a local proxy-cache to download packages from. We did it in
-two steps:
+It's gone?!
 
-1. we edited the `configuration.nix` file
-2. we ran the `nixos-rebuild` command
+## 🎯 Apply the operating system configuration
 
-The current section of the workshop will address how to achieve different goals
-using these two tools: edit configuration and rebuild.
+It's permanent but undoable
 
+## 🎯 Reboot NixOS and interrupt booting when at the GRUB menu
 
-## Structure of /etc/nixos/configuration.nix
+Select Generation 1.
+"you are at a console"
+
+## 🎯 Reboot NixOS and interrupt booting when at the GRUB menu
+
+Select Generation 2.
+"you are at x11"
+
+## 🎯 Save your progress
+
+"git commit"
+
+## 💡 Structure of /etc/nixos/configuration.nix
 
 A `configuration.nix` file is really a function definition in the Nix language.
 It usually starts with `{config, pkgs, ... }:` which means it takes two
@@ -195,7 +247,7 @@ at as you go through this description.
       ```
     Please remember to give your new user a password with `passwd`.
 
-## `nixos-rebuild`: what it says on the tin
+## 💡 nixos-rebuild
 
 The nixos-rebuild command takes a NixOS system in a working state and a
 `configuration.nix` file, and returns a changed working state according to the
@@ -233,39 +285,8 @@ More options allow you to declare remote builders, change profiles (GRUB
 submenus) to install your new configuration at, and even target a different host
 to activate the new configuration on. As always, check `man nixos-rebuild`.
 
-## Now type this
 
-Let's add some applications to your NixOS install. But within reason, you don't want
-to spend all the workshop downloading! Here are some things we recommend you
-install now.
+## ⏭️ What's next
 
-Please gain root in your NixOS system with `sudo su`, edit
-`/etc/nixos/configuration.nix` and add the following:
-
-```nix
-environment.systemPackages = with pkgs; [
-  wget htop tree screen file psmisc
-  fd ripgrep
-  git
-  xorg.xkill
-];
-```
-
-Since we're at it, why not add your own user?
-
-```nix
-users.extraUsers.YOUR_USERNAME = {
-  isNormalUser = true;
-  description = "NAME SURNAME";
-  extraGroups = [
-  "systemd-journal"
-  "wheel"
-  "networkmanager"
-  ];
-```
-
-Now run `nixos-rebuild --switch` so the new configuration takes root.
-
-And you can try `# su YOUR_USERNAME` and become your new user. Remember to set a password with `passwd`.
-
-## What's next
+<!-- in-line links -->
+[fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
