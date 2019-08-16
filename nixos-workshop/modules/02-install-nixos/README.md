@@ -271,6 +271,7 @@ nixos-install
 
 ## 📚 Additional reading material
 
+* [NixOS Manual: Chapter 2. Installing NixOS](https://nixos.org/nixos/manual/index.html#sec-installation).
 * [Instructions for booting from an Ubuntu liveCD and installing NixOS on a machine](https://gist.github.com/chris-martin/4ead9b0acbd2e3ce084576ee06961000).
 * [Installating NixOS with encrypted root](https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134).
 * [Installing NixOS on Hetzner bare metal with ZFS](https://ghuntley.com/notes/hetzner/).

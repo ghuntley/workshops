@@ -9,7 +9,7 @@ By the end of this module you will:
 * Learn what NixOS is and understand how NixOS has solved fundamental problems which plague other operating systems.
 * Discover that NixOS does not use the standard directory structure found in other Linux distributions.
 * Discover that industry configuration management tools are no longer required.
-* Discover that `sudo` is no longer required.
+* Discover that `sudo` to install software is no longer required.
 
 ## 💡 What is NixOS
 
