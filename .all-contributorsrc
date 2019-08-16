@@ -48,10 +48,19 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "ajmcmiddlin",
+      "name": "Andrew",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1066870?v=4",
+      "profile": "http://qfpl.io/people/ajmcmiddlin/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "nix-workshop",
+  "projectName": "workshops",
   "projectOwner": "ghuntley",
   "repoType": "github",
   "repoHost": "https://github.com"
