@@ -113,7 +113,7 @@ lvcreate -l 100%FREE -n root nixos-vg
 
 ### Create Your filesystems
 
-In the below snippet, $BOOT refers to the boot partition created above - something like /dev/sda1.
+In the below snippet, `$BOOT` refers to the boot partition created above - something like /dev/sda1.
 
 ```bash
 # Create a FAT32 filesystem on our boot partition
@@ -160,7 +160,7 @@ vim /mnt/etc/nixos/configuration.nix
 
 If anything is broken in your config, installation will fail with an error message to help diagnose your problem. Furthermore, because NixOS is the way it is, you can radically reconfigure your system later knowing that you can fallback to a known good configuration, and once you’re confident everything works, clean up packages you no longer need. In short, don’t stress too much about installing and configuring absolutely everything. It’s fine to start with a small but working system and build up as you learn what you want.
 
-It is of critical importance that you tell NixOS about the LUKS encrypted partition which was created as needs to be decrypted before it's possible to any LVM partitions. We do that like so.
+It is of critical importance that you tell NixOS about the LUKS encrypted partition which was created as needs to be decrypted before it's possible to use to any LVM partitions. We do that like so.
 
 ```nix
 boot.initrd.luks.devices = [
@@ -172,7 +172,7 @@ boot.initrd.luks.devices = [
 ];
 ```
 
-NixOS also needs to know that we’re using EFI, however may have been correctly configured for you automatically.
+NixOS also needs to know that we’re using EFI, however it may have been correctly configured for you automatically.
 
 ```nix
 boot.loader.systemd-boot.enable = true

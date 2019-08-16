@@ -47,7 +47,7 @@ The top-level location for system binaries — the ones installed explicitly by 
 
 ## ⏭️ What's next
 
-In [the next module][next-module] you'll install NixOS either on computer as it's primary operating system or in a virtual machine on your computer. Each module from here onwards you'll learn about NixOS concepts and how to manage NixOS.
+In [the next module][next-module] you'll install NixOS either on a computer as it's primary operating system or in a virtual machine on your computer. Each module from here onwards you'll learn about NixOS concepts and how to manage NixOS.
 
 <!-- in-line links -->
 [fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
