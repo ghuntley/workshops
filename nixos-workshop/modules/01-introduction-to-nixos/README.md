@@ -57,4 +57,4 @@ In [the next module][next-module] you'll install NixOS either on computer as it'
 [nixos-manual]: https://nixos.org/nixos/manual/
 [nixos-website]: https://nixos.org/nixos/
 
-[next-module]: ../01-install-nixos/README.md
+[next-module]: ../02-install-nixos/README.md
