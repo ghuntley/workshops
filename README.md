@@ -2,6 +2,7 @@
 
 
 # see also
+
 - https://github.com/Gabriel439/haskell-nix
 - https://github.com/basvandijk/nix-workshop
 - https://github.com/nixcloud/nixpkgs-workshop
@@ -11,7 +12,7 @@
 
 ## Contributing
 
-If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue](https://github.com/ghuntley/nix-workshop/issues/new/choose) on GitHub. If you see a opportunity to improve the courseware please send in a pull-request.
+If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue][share-feedback] on GitHub. If you see a opportunity to improve the course ware please send in a pull-request.
 
 ## Contributors ✨
 
@@ -32,10 +33,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## Thanks
-- Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/) and [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/).
-
 ## License
 
-This workshop is available under [CC-BY-SA-4.0](LICENSE.md). If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue](https://github.com/ghuntley/nix-workshop/issues/new/choose) on GitHub. If you see a opportunity to improve the courseware please send in a pull-request.
+These workshops are made available under the [CC-BY-SA-4.0][license]. If you use this material to conduct your own workshop, please share where it was used and [feedback by creating a new issue on GitHub][share-feedback]. If you see a opportunity to improve the course ware please send in a pull-request.
 
+<!-- in-line links -->
+[license]: LICENSE.md
+[share-feedback]: https://github.com/ghuntley/nix-workshop/issues/new?labels=feedback%2C+untriaged&template=feedback.md
