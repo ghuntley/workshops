@@ -11,8 +11,7 @@ Attendees will need a computer with Virtual Box installed:
 
 ## ☑️ Configuration
 
-
-# What's next
+## What's next
 
 🎉 that's it. Your computer is now setup to learn all about the NixOS operating system. In the [next module][next-module] you'll learn all about NixOS and install the operating system.
 
