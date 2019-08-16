@@ -1,4 +1,4 @@
-# workshops [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
+# workshops [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 
 
 # see also
@@ -26,6 +26,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://hiperactivo.com/"><img src="https://avatars1.githubusercontent.com/u/91694?v=4" width="100px;" alt="Javier Candeira"/><br /><sub><b>Javier Candeira</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=candeira" title="Code">💻</a> <a href="https://github.com/ghuntley/workshops/commits?author=candeira" title="Documentation">📖</a> <a href="#talk-candeira" title="Talks">📢</a> <a href="https://github.com/ghuntley/workshops/commits?author=candeira" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://ebzzry.io"><img src="https://avatars3.githubusercontent.com/u/7875?v=4" width="100px;" alt="Rommel MARTINEZ"/><br /><sub><b>Rommel MARTINEZ</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=ebzzry" title="Code">💻</a> <a href="https://github.com/ghuntley/workshops/commits?author=ebzzry" title="Documentation">📖</a></td>
     <td align="center"><a href="https://jameshfisher.com"><img src="https://avatars2.githubusercontent.com/u/166966?v=4" width="100px;" alt="James Harrison Fisher"/><br /><sub><b>James Harrison Fisher</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=jameshfisher" title="Code">💻</a> <a href="https://github.com/ghuntley/workshops/commits?author=jameshfisher" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://qfpl.io/people/ajmcmiddlin/"><img src="https://avatars1.githubusercontent.com/u/1066870?v=4" width="100px;" alt="Andrew"/><br /><sub><b>Andrew</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=ajmcmiddlin" title="Documentation">📖</a></td>
   </tr>
 </table>
 
