@@ -242,7 +242,7 @@ Now run `ping dymaxion.local` to confirm that avahi is functioning and the proxy
 > nixos-rebuild --option substituter $LOCAL_CACHE_PROXY_IP test
 > ```
 >
-> Knowing this can be a lifesaver if you stuff up your `binareCaches` configuration and you need to know this because you'll need to run `nixos-rebuild --option substituter https://cache.nixos.org/ switch` after you leave the workshop as the `dymaxion.local` proxy-cache will no longer be accessible.
+> Knowing this can be a lifesaver if you stuff up your `binaryCaches` configuration, or if you don't stuff it up but the caches change after you configure them. For instance, you might need to run `nixos-rebuild --option substituter https://cache.nixos.org/ switch` after you leave the workshop, as the `dymaxion.local` proxy-cache will no longer be accessible.
 </p>
 </details>
 

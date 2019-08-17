@@ -1,8 +1,9 @@
 - nixos
-  - 00-introduction-to-nixos
-  - 01-install-nixos
+  - 00-prerequisites
+  - 01-introduction-to-nixos
+  - 02-install-nixos
       - Status: Done.
-  - 02-change-nixos-configuration
+  - 03-change-nixos-configuration
       - Status: advanced, but Javier has a couple and requests for Geoff
       - TODO (JC) INCLUDE SAMPLE configuration.nix FILE
       - QUESTION(JC) Why do we have top level keys like `users` that aren't a NixOS module? What are they?
@@ -11,18 +12,18 @@
         config  hardware  i18n  installer  misc  module-list.nix  profiles  programs
         rename.nix  security  services  system  tasks  testing  virtualisation
         ```
-  - 03-roll-back-configuration
+  - 04-roll-back-configuration
     - Geoff dibs this one.
-  - 04-introducing-the-nixstore
+  - 05-introducing-the-nixstore
     - Geoff dibs this one
-  - 05-introducing-channels-and-nixpkgs
+  - 06-introducing-channels-and-nixpkgs
     - Geoff dibs this one
     - Javier's special request: Overlays, Overrides, and what Debian calls "pinning" or "backporting"
-  - 06-continuous-integration
+  - 07-continuous-integration
     - Geoff dibs this one
-  - 07-deployment
-  - 08-integration-testing
-  - 09-server-farms
+  - 08-deployment
+  - 09-integration-testing
+  - 10-server-farms
 
 - nix
   - 00-introduction-to-nix
