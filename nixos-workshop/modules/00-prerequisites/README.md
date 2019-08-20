@@ -10,8 +10,8 @@ Attendees will need a computer with Virtual Box installed:
 
 * [ ] Download the [NixOS demo appliance][download-nixos-ova] for VirtualBox (in OVA format) that has X11 and Plasma 5 enabled.
 * [ ] Download the [NixOS graphical installation ISO][download-nixos-iso] which contains the NixOS installer.
-* [ ] Download and install the [VirtualBox][download-virtualbox].
-* [ ] Download and install the [VirtualBox Extension Pack][download-virtualbox-extension-pack].
+* [ ] Download and install [VirtualBox][download-virtualbox].
+* [ ] Download and install [VirtualBox Extension Pack][download-virtualbox-extension-pack].
 
 ## ☑️ Configuration
 
