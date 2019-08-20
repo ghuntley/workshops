@@ -1,11 +1,13 @@
 - nixos
   - 00-prerequisites
+      - Status: Done.
   - 01-introduction-to-nixos
+      - Status: Done.
   - 02-install-nixos
       - Status: Done.
   - 03-change-nixos-configuration
-      - Status: advanced, but Javier has a couple and requests for Geoff
-      - TODO (JC) INCLUDE SAMPLE configuration.nix FILE
+      - Status: Done (Javier has questions and requests)
+
       - QUESTION(JC) Why do we have top level keys like `users` that aren't a NixOS module? What are they?
         ```
         [kandinski@desire:~/data/work/hack/nixos/nixpkgs/nixos/modules]$ ls
@@ -13,7 +15,7 @@
         rename.nix  security  services  system  tasks  testing  virtualisation
         ```
   - 04-roll-back-configuration
-    - Geoff dibs this one.
+      - Status: Done.
   - 05-introducing-the-nixstore
     - Geoff dibs this one
   - 06-introducing-channels-and-nixpkgs

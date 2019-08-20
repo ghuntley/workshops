@@ -4,6 +4,8 @@
     "plantuml.exportOutDir": "./",
     "plantuml.exportConcurrency": 16,
     "cSpell.words": [
-        "nixos"
+        "nixos",
+        "virtualisation",
+        "virtualsation"
     ]
 }
