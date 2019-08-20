@@ -1,12 +1,12 @@
 - nixos
   - 00-prerequisites
-      - Status: Done.
+      - Status: Done, review needed plus lipstick if required.
   - 01-introduction-to-nixos
-      - Status: Done.
+      - Status: Done, review needed plus lipstick if required.
   - 02-install-nixos
-      - Status: Done.
+      - Status: Done, review needed plus lipstick if required.
   - 03-change-nixos-configuration
-      - Status: Done (Javier has questions and requests)
+      - Status: Done, review needed plus lipstick if required. Javier has questions and requests.
 
       - QUESTION(JC) Why do we have top level keys like `users` that aren't a NixOS module? What are they?
         ```
@@ -15,7 +15,7 @@
         rename.nix  security  services  system  tasks  testing  virtualisation
         ```
   - 04-roll-back-configuration
-      - Status: Done.
+      - Status: Done, review needed plus lipstick if required.
   - 05-introducing-the-nixstore
     - Geoff dibs this one
   - 06-introducing-channels-and-nixpkgs
