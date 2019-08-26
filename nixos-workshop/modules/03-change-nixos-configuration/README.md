@@ -11,7 +11,10 @@ alien syntax.
 
 For those at the Melbourne :: C◦mp◦se 2019 workshop:
 
-* We've already changed the configuration in our NixOS system to ensure we can use mdns and to set up a local proxy-cache to download packages from. We did it in two steps: we edited the `configuration.nix` file and we ran the `nixos-rebuild` command.
+* We've already changed the configuration in our NixOS system to ensure we can
+  use mdns and to set up a local proxy-cache to download packages from. We did
+  it in two steps: we edited the `configuration.nix` file and we ran the
+  `nixos-rebuild` command.
 
 By the end of this module you will have:
 
@@ -30,9 +33,15 @@ Let's save your progress so far! Run the following command to make git available
 nix-env -iA nixos.git
 ```
 
-This command did not globally install git, instead git is installed into `~/.nix-profile/bin/` of the root user. Here you are reaping the rewards of NixOS not following the [Filesystem Hierarchy Standard][fhs-standard]. On other GNU/Linux distributions git would have been installed globally and that would be the system wide version for all users. 
+This command did not globally install git; instead git is installed into
+`~/.nix-profile/bin/` of the root user. Here you are reaping the rewards of
+NixOS not following the [Filesystem Hierarchy Standard][fhs-standard]. On other
+GNU/Linux distributions git would have been installed globally and that would be
+the system wide version for all users.
 
-With NixOS, you can side-by-side multiple versions of the same software for any user without stomping on other users. You get one of the benefits of docker, but without overhead, complexity and instability.
+With NixOS, you can side-by-side multiple versions of the same software for any
+user without stomping on other users. You get one of the benefits of docker, but
+without overhead, complexity and instability.
 
 Let's initialize a git repository and create a checkpoint:
 
@@ -60,7 +69,10 @@ services.xserver.displayManager.sddm.enable = true;
 services.xserver.desktopManager.plasma5.enable = true;
 ```
 
-In addition to these core configuration items, you might want to install some packages to get you started. Your NixOS install is currently really bare. You can search for packages to install with `nix-env -qaP | grep $PACKAGE`. Add any additional packages that catch your fancy.
+In addition to these core configuration items, you might want to install some
+packages to get you started. Your NixOS install is currently really bare. You
+can search for packages to install with `nix-env -qaP | grep $PACKAGE`. Add any
+additional packages that catch your fancy.
 
 Add the following packages at minimum to your configuration:
 
@@ -79,7 +91,11 @@ environment.systemPackages = (with pkgs; [
 ]);
 ```
 
-Finally, it’s not a good idea to use root all the time, so let's create a `workshop` user with a home directory and add the user to a few groups. Most importantly, let's add the user to be a member of `wheel` so that the account can run privileged commands (`nixos-rebuild` and `reboot`) with sudo.
+Finally, it’s not a good idea to use root all the time, so let's create a
+`workshop` (or whatever other name you want) user with a home directory and add
+the user to a few groups. Most importantly, let's add the user to be a member of
+`wheel` so that the account can run privileged commands (`nixos-rebuild` and
+`reboot`) with sudo.
 
 ```nix
 users.extraUsers.workshop = {
@@ -100,26 +116,51 @@ passwd workshop
 
 ## 💡 nixos-rebuild
 
-Changes to `/etc/nixos/configuration.nix` are not applied unless `nixos-rebuild` is invoked. This command takes a NixOS system in a working state and a `configuration.nix` file, and returns a changed working state according to the configuration file.
+Changes to `/etc/nixos/configuration.nix` are not applied unless `nixos-rebuild`
+is invoked. This command takes a NixOS system in a working state and a
+`configuration.nix` file, and returns a changed working state according to the
+configuration file.
 
 Here are the most common sub-commands:
 
-* `nixos-rebuild switch`: Build and activate the new configuration, and make it the boot default. That is, the configuration is added to the GRUB boot menu as the default menu entry, so that subsequent reboots will boot the system into the new configuration. Previous configurations activated with nixos-rebuild switch or nixos-rebuild boot remain available in the GRUB menu.
-* `nixos-rebuild boot`: Build the new configuration and make it the boot default (as with nixos-rebuild switch), but do not activate it. That is, the system continues to run the previous configuration until the next reboot.
-* `nixos-rebuild test`: Build and activate the new configuration, but do not add it to the GRUB boot menu. Thus, if you reboot the system (or if it crashes), you will automatically revert to the default configuration (i.e. the configuration resulting from the last call to nixos-rebuild switch or nixos-rebuild boot).
-* `nixos-rebuild build`: Build the new configuration, but neither activate it nor add it to the GRUB boot menu. It leaves a symlink named result in the current directory, which points to the output of the top-level "system" derivation. You do not need to be root to run nixos-rebuild build.
+* `nixos-rebuild switch`: Build and activate the new configuration, and make it
+  the boot default. That is, the configuration is added to the GRUB boot menu as
+  the default menu entry, so that subsequent reboots will boot the system into
+  the new configuration. Previous configurations activated with nixos-rebuild
+  switch or nixos-rebuild boot remain available in the GRUB menu.
+* `nixos-rebuild boot`: Build the new configuration and make it the boot default
+  (as with nixos-rebuild switch), but do not activate it. That is, the system
+  continues to run the previous configuration until the next reboot.
+* `nixos-rebuild test`: Build and activate the new configuration, but do not add
+  it to the GRUB boot menu. Thus, if you reboot the system (or if it crashes),
+  you will automatically revert to the default configuration (i.e. the
+  configuration resulting from the last call to nixos-rebuild switch or
+  nixos-rebuild boot).
+* `nixos-rebuild build`: Build the new configuration, but neither activate it
+  nor add it to the GRUB boot menu. It leaves a symlink named result in the
+  current directory, which points to the output of the top-level "system"
+  derivation. You do not need to be root to run nixos-rebuild build.
 
-Other sub-commands are useful for debugging by performing dry runs or building qemu virtual machines. Check out `man nixos-rebuild` if you want to learn more.
+Other sub-commands are useful for debugging by performing dry runs or building
+qemu virtual machines. Check out `man nixos-rebuild` if you want to learn more.
 
 The `nixos-rebuild` command also has options. Here are the most common:
 
-* `--upgrade`: fetches the latest version of NixOS from the NixOS channel before rebuilding.
-* `--install-bootloader`: use to reinstall the bootloader after changing the device configuration.
-* `--no-build-nix`: usually, nixos-rebuild first builds the latest version of the Nix package manager before rebuilding. This option disables this.
-* `--fast`: equivalent to `--no-build-nix --show-trace`. Use when you're calling `nixos-rebuild` frequently.
-* `--rollback`: Don't build a new configuration based on `/etc/nixos/configuration.nix`. Rather, roll back the previous configuration.
+* `--upgrade`: fetches the latest version of NixOS from the NixOS channel before
+  rebuilding.
+* `--install-bootloader`: use to reinstall the bootloader after changing the
+  device configuration.
+* `--no-build-nix`: usually, nixos-rebuild first builds the latest version of
+  the Nix package manager before rebuilding. This option disables this.
+* `--fast`: equivalent to `--no-build-nix --show-trace`. Use when you're calling
+  `nixos-rebuild` frequently.
+* `--rollback`: Don't build a new configuration based on
+  `/etc/nixos/configuration.nix`. Rather, roll back the previous configuration.
 
-There's also additional options allow you to declare remote builders, change profiles (GRUB submenus) to install your new configuration at, and even target a different host to activate the new configuration on. As always, check `man nixos-rebuild`.
+There's also additional options allow you to declare remote builders, change
+profiles (GRUB submenus) to install your new configuration at, and even target a
+different host to activate the new configuration on. As always, check `man
+nixos-rebuild`.
 
 ## 🎯 Reboot NixOS and interrupt booting when at the GRUB menu
 
@@ -131,20 +172,27 @@ Press `Enter` on your keyboard and you'll see a single entry:
 
 ![NixOS Grub Menu - Configuration 1 selected](grub-menu-one-generation.png)
 
-Each time a new operating system configuration applied, a new menu item in GRUB will be created. These configurations are also known as "generations". As you are yet to apply your new operating system configuration you'll only see one generation.
+Each time a new operating system configuration applied, a new menu item in GRUB
+will be created. These configurations are also known as "generations". As you
+are yet to apply your new operating system configuration you'll only see one
+generation.
 
 Select `NixOS - Configuration 1` and press enter to boot back into NixOS.
 
 ## 🎯 Build the operating system configuration
 
-Login as `root` and let's validate that `/etc/nixos/configuration.nix` has no errors:
+Login as `root` and let's validate that `/etc/nixos/configuration.nix` has no
+errors:
 
 ```bash
 cd /etc/nixos
 nixos-rebuild build
 ```
 
-This command will build the new system configuration, but won't activate it nor add into the GRUB boot menu. When building NixOS machines with a continuous integration server you'll use `nixos-rebuild build` is the primary verb you'll use.
+This command will build the new system configuration, but won't activate it nor
+add into the GRUB boot menu. When building NixOS machines with a continuous
+integration server you'll use `nixos-rebuild build` is the primary verb you'll
+use.
 
 If the build was successful then it's time to save your progress:
 
@@ -154,35 +202,50 @@ git add -A
 git commit -m "checkpoint commit"
 ```
 
-If the compilation failed, resolve them by correcting `/etc/nixos/configuration.nix` before proceeding.
+If the compilation failed, resolve them by correcting
+`/etc/nixos/configuration.nix` before proceeding.
 
 ## 🎯 Test the operating system configuration
 
-Now that your operating system configuration is successfully building, let's try out the changes in a non-commital way:
+Now that your operating system configuration is successfully building, let's try
+out the changes in a non-commital way:
 
 ```bash
 nixos-rebuild test
 ```
 
-This command builds and activates the new configuration, but does not add it to the GRUB boot menu. Thus, if you reboot the system (or if it crashes), you will automatically revert to the default configuration (i.e. the configuration resulting from the last call to nixos-rebuild switch or nixos-rebuild boot).
+This command builds and activates the new configuration, but does not add it to
+the GRUB boot menu. Thus, if you reboot the system (or if it crashes), you will
+automatically revert to the default configuration (i.e. the configuration
+resulting from the last call to nixos-rebuild switch or nixos-rebuild boot).
 
-Now imagine, your sshed into a machine and accidentally made a mistake to the configuration which locked out your network access. Because you used `nixos-rebuild test` to activate and validate your changes _before_ commiting them via `nixos-rebuild switch` you can roll back mistakes by simply rebooting the computer.
+Now imagine, your ssh-ed into a machine and accidentally made a mistake to the
+configuration which locked out your network access. Because you used
+`nixos-rebuild test` to activate and validate your changes _before_ committing
+them via `nixos-rebuild switch` you can roll back mistakes by simply rebooting
+the computer.
 
-Let's validate your changes have been applied and activated but not commited:
+Let's validate your changes have been applied and activated but not committed:
 
 ```bash
 # htop, a command which wasn't previously installed now works
 htop
 ```
 
-Reboot the computer and log back in as `root`. When you re-run the `htop` command you'll notice that it isn't installed anymore.
+Reboot the computer and log back in as `root`. When you re-run the `htop`
+command you'll notice that it isn't installed anymore.
 
 ```bash
 # htop: command not found
 htop
 ```
 
-> 🛈 If you need to validate changes in continuous integration scenarios or during initial development, instead of using `nixos-rebuild test` consider using the `nixos-rebuild build-vm` command instead. This command builds a virtual machine with the configuration defined in `/etc/nixos/configuration.nix`. Once the virtual machine has been built the virtual machine can be started by running `./result/bin/run-*-vm`.
+> 🛈 If you need to validate changes in continuous integration scenarios or
+> during initial development, instead of using `nixos-rebuild test` consider
+> using the `nixos-rebuild build-vm` command instead. This command builds a
+> virtual machine with the configuration defined in
+> `/etc/nixos/configuration.nix`. Once the virtual machine has been built the
+> virtual machine can be started by running `./result/bin/run-*-vm`.
 
 ## 📚 Additional reading material
 
