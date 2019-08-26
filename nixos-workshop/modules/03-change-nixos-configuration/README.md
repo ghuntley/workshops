@@ -247,17 +247,18 @@ htop
 > `/etc/nixos/configuration.nix`. Once the virtual machine has been built the
 > virtual machine can be started by running `./result/bin/run-*-vm`.
 
-## 📚 Additional reading material
 
-<!-- 
+## 📚 Structure of a configuration.nix file
 
-A `configuration.nix` file is really a function definition in the Nix language. It usually starts with `{config, pkgs, ... }:` which means it takes two arguments: `config` and `pkgs`. Then it returns a set of option definitions (key/value pairs of the form `{ option = definition; }`) that, processed by nixos-rebuild, updates the system. We'll explain later how this works.
+A `configuration.nix` file is really a function definition in the Nix language.
+It usually starts with `{config, pkgs, ... }:` which means it takes two
+arguments: `config` and `pkgs`. Then it returns a set of option definitions
+(key/value pairs of the form `{ option = definition; }`) that, processed by
+nixos-rebuild, updates the system. We'll explain later how this works.
 
 
 We've included a sample file in the repo that we recommend you look
 at as you go through this description. 
-
-@@TODO (JC) INCLUDE SAMPLE configuration.nix FILE
 
   - `boot`: Most systems will use Grub 2, which can be configured to boot with
     BIOS or UEFI.
@@ -363,8 +364,6 @@ at as you go through this description.
         users.defaultUserShell = "/run/current-system/sw/bin/bash";
       ```
     Please remember to give your new user a password with `passwd`.
-
--->
 
 ## ⏭️ What's next
 
