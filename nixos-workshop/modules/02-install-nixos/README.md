@@ -20,7 +20,60 @@ By the end of this module you will have:
 It is assumed that you have downloaded the [prerequisites and configure your
 computer][prerequisites] before.
 
-If you are running the tutorial on a VirtualBox VM, then you're all set.
+If you are running the tutorial on a preinstalled appliance on VirtualBox VM, 
+then you're set.
+
+<details><summary>✋🎯️ At the Melbourne :: C◦mp◦se 2019 Workshop we are running
+a NixOS proxy-cache for the workshop so that the class doesn't become
+bottlenecked by internet access speeds. The proxy-cache server name is
+discoverable by the mdns name <code>dymaxion.local</code>. Expand this section
+for configuration instructions. </summary> <p>
+
+You'll need to do two steps:
+
+1. Activate the proxy-cache in the temporary in-memory operating system
+   configuration
+
+```bash
+chmod 644 /etc/nixos/configuration.nix
+vi /etc/nixos/configuration.nix
+```
+
+Add the following lines:
+
+```nix
+services.avahi.enable = true;
+services.avahi.nssmdns = true;
+
+nix.binaryCaches = [
+   "http://dymaxion.local"
+   "https://cache.nixos.org"
+];
+```
+
+1. Exit your editor and, still as root, activate the configuration:
+
+```bash
+nixos-rebuild switch
+```
+Now run `ping dymaxion.local` to confirm that avahi is functioning and the
+proxy-cache is accessible.
+
+> 🛈 You can declare your `binaryCaches` on the command line. The option is
+> called `substituter`. During the workshop, have a play around with:
+>
+> ```bash
+> nixos-rebuild --option substituter https://cache.nixos.org/ test
+> nixos-rebuild --option substituter $LOCAL_CACHE_PROXY_IP test
+> ```
+>
+> Knowing this can be a lifesaver if you stuff up your `binaryCaches`
+> configuration, or if you don't stuff it up but the caches change after you
+> configure them. For instance, you might need to run `nixos-rebuild --option
+> substituter https://cache.nixos.org/ switch` after you leave the workshop, as
+> the `dymaxion.local` proxy-cache will no longer be accessible. </p> 
+
+</details>
 
 If you are installing NixOS on your computer as its primary operating system then
 you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso]
@@ -290,15 +343,20 @@ nix.binaryCaches = [
 Now run `ping dymaxion.local` to confirm that avahi is functioning and the
 proxy-cache is accessible.
 
-> 🛈 You can declare your `binaryCaches` on the command line. The option is called `substituters`. During the workshop, have a play around with:
+> 🛈 You can declare your `binaryCaches` on the command line. The option is
+> called `substituter`. During the workshop, have a play around with:
 >
 > ```bash
 > nixos-rebuild --option substituter https://cache.nixos.org/ test
 > nixos-rebuild --option substituter $LOCAL_CACHE_PROXY_IP test
 > ```
 >
-> Knowing this can be a lifesaver if you stuff up your `binaryCaches` configuration, or if you don't stuff it up but the caches change after you configure them. For instance, you might need to run `nixos-rebuild --option substituter https://cache.nixos.org/ switch` after you leave the workshop, as the `dymaxion.local` proxy-cache will no longer be accessible.
-</p>
+> Knowing this can be a lifesaver if you stuff up your `binaryCaches`
+> configuration, or if you don't stuff it up but the caches change after you
+> configure them. For instance, you might need to run `nixos-rebuild --option
+> substituter https://cache.nixos.org/ switch` after you leave the workshop, as
+> the `dymaxion.local` proxy-cache will no longer be accessible. </p> 
+
 </details>
 
 ### Start the install
@@ -313,7 +371,11 @@ nixos-install
 reboot
 ```
 
-Go get a coffee while everything installs, and hopefully you’ll reboot to your new system. If something has gone wrong, don’t worry. You can always boot back into the installation media, mount your partitions, update the configuration, and install again. To mount existing partitions, you’ll need to decrypt the LVM partition and then activate its volume group.
+Go get a coffee while everything installs, and hopefully you’ll reboot to your
+new system. If something has gone wrong, don’t worry. You can always boot back
+into the installation media, mount your partitions, update the configuration,
+and install again. To mount existing partitions, you’ll need to decrypt the LVM
+partition and then activate its volume group.
 
 ```bash
 cryptsetup luksOpen $LVM_PARTITION nixos-enc
