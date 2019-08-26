@@ -21,14 +21,14 @@ Attendees will need a computer with Virtual Box installed:
 
 If you are installing NixOS on a laptop as it's primary operating system then
 you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso].
-Alternatively, if you are going to use Virtual Box then you'll need to import
-the image and adjust the default settings:
+
+Alternatively, if you are going to use VirtualBox then you'll need to:
 
 * [ ] In VirtualBox, use the menu option `File -> Import Appliance` and import
       the [NixOS demo appliance][download-nixos-ova].
 
-In Virtual Box, with the appliance turned off, go into the virtual machine
-   settings and change the following details:
+Then, still within VirtualBox and with the appliance turned off, go into the
+   virtual machine settings and change the following details:
 
 * [ ] **System/Motherboard**: Raise memory to 4GB or 8GB, or some
       `nixos-rebuilt` or `nix-env` operations might fail.
@@ -37,12 +37,12 @@ In Virtual Box, with the appliance turned off, go into the virtual machine
 * [ ] **USB**: Disable USB 2.0 and enable 1.1 instead.
 
 Windows users, if Hyper-V is enabled on your computer [you'll need to follow
-these steps][bcd-edit] from Scott Hansleman before VirtualBox will work on your
+these steps][bcd-edit] from Scott Hanselman before VirtualBox will work on your
 computer.
 
 ## What's next
 
-🎉 that's it. Your now ready to learn all about the NixOS operating system. In
+🎉 that's it. You're now ready to learn all about the NixOS operating system. In
 the [next module][next-module] you'll learn all about NixOS and install the
 operating system.
 
