@@ -4,13 +4,18 @@
 
 ## 🎯 Apply the operating system configuration
 
-Now that you have validated that your operating system builds and have activated the configuration via `nixos-rebuild test` let's make it the boot default. That is, the configuration which is added to the GRUB boot menu as the default menu entry, so that subsequent reboots will boot the system into the new configuration.
+Now that you have validated that your operating system builds and have activated
+the configuration via `nixos-rebuild test` let's make it the boot default. That
+is, the configuration which is added to the GRUB boot menu as the default menu
+entry, so that subsequent reboots will boot the system into the new
+configuration.
 
 ```bash
 nixos-rebuild switch
 ```
 
-Reboot your computer and when GRUB appears navigate to `NixOS - All Configurations`
+Reboot your computer and when GRUB appears navigate to `NixOS - All
+Configurations`
 
 ![The NixOS GRUB Menu](grub-menu.png)
 
@@ -18,13 +23,16 @@ Press `Enter` on your keyboard and you'll see two entries:
 
 ![NixOS Grub Menu - Configuration 2 selected](grub-menu-two-generations-gen2-selected.png)
 
-Select `NixOS - Configuration 2` and press enter to boot back into NixOS. If all went well then you should now be looking at a X11 login prompt:
+Select `NixOS - Configuration 2` and press enter to boot back into NixOS. If all
+went well then you should now be looking at a X11 login prompt:
 
 ![SDDM X11 login prompt](sddm-login-prompt.png)
 
 ## 🎯 Reboot to the previous configuration
 
-Let's reboot your computer and boot back into the previous configuration which did not have X11 configured. Reboot your computer and when GRUB appears navigate to `NixOS - All Configurations`
+Let's reboot your computer and boot back into the previous configuration which
+did not have X11 configured. Reboot your computer and when GRUB appears navigate
+to `NixOS - All Configurations`
 
 ![The NixOS GRUB Menu](grub-menu.png)
 
@@ -32,13 +40,18 @@ Press `Enter` on your keyboard and you'll see two entries:
 
 ![NixOS Grub Menu - Configuration 1 selected](grub-menu-two-generations-gen1-selected.png)
 
-Select `NixOS - Configuration 1` and press enter to boot back into NixOS. If all went well then you should now be looking at a console login prompt:
+Select `NixOS - Configuration 1` and press enter to boot back into NixOS. If all
+went well then you should now be looking at a console login prompt:
 
 ![Console login prompt](console-login-prompt.png)
 
 ## 🎯 Roll back all changes
 
-One of the operating modes of `nixos-rebuild [switch|test]` is `--rollback`. Instead of building a new configuration as specified by `/etc/nixos/configuration.nix`, you will roll back to the previous configuration. The previous configuration is defined as the one before the "current" generation of the system.
+One of the operating modes of `nixos-rebuild [switch|test]` is `--rollback`.
+Instead of building a new configuration as specified by
+`/etc/nixos/configuration.nix`, you will roll back to the previous
+configuration. The previous configuration is defined as the one before the
+"current" generation of the system.
 
 Let's roll all the way back to nothing:
 
