@@ -8,7 +8,7 @@ https://nixos.wiki/wiki/Nix_Expression_Language
 
 ## We'll follow this guide
 
- https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55
+https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55
 
 
 ## 🗹 Recap

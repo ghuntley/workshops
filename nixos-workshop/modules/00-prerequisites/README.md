@@ -21,7 +21,7 @@ following softare:
 
 ## ☑️ Configuration
 
-If you are installing NixOS on a laptop as it's primary operating system then
+If you are installing NixOS on a laptop as its primary operating system then
 you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso].
 
 Alternatively, if you are going to use VirtualBox then you'll need to:
