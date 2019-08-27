@@ -31,7 +31,7 @@ Then, still within VirtualBox and with the appliance turned off, go into the
    virtual machine settings and change the following details:
 
 * [ ] **System/Motherboard**: Raise memory to 4GB or 8GB, or some
-      `nixos-rebuilt` or `nix-env` operations might fail.
+      `nixos-rebuild` or `nix-env` operations might fail.
 * [ ] **Network/Adapter2**: Ensure you have your host laptop's WiFi card as
       `Attached to: Bridged Adapter`
 * [ ] **USB**: Disable USB 2.0 and enable 1.1 instead.
