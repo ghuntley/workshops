@@ -6,7 +6,7 @@ Attendees will need a computer with either Linux, macOS or Windows 10 (with WSL 
 
 ## ☑️ NixOS
 
-No configuration needed as the nix package manager is already installed! 🎉
+No configuration needed as the nix package manager is already installed! The whole operating system is built around it 🎉
 
 ## ☑️ Debian, Ubuntu, Arch, RedHat and macOS
 
