@@ -99,7 +99,7 @@ since you know how and when it does and doesn't work.
 - [Getting started with Nix]
 - [Nix Manual Glossary]
 
-!-- in-line links -->
+<!-- in-line links -->
 [About Nix]: http://nixos.org/nix/manual/#ch-about-nix
 [Introducing Nix]: http://qfpl.io/posts/nix/introducing-nix/
 [Getting started with Nix]: http://qfpl.io/posts/nix/getting-started-with-nix/
