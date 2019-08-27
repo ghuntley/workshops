@@ -40,6 +40,30 @@ Then, still within VirtualBox and with the appliance turned off, go into the
       `Attached to: Bridged Adapter`
 * [ ] **USB**: Disable USB 2.0 and enable 1.1 instead.
 
+You could also use [Vagrant](https://www.vagrantup.com/docs/index.html) to manage the VirtualBox machine. This will provide you with a headless machine which you can SSH into. Write out the the following Vagrantfile:
+```ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure('2') do |config|
+  config.vm.box = 'kreisys/nixos-19.03-x86_64'
+  config.vm.synced_folder '.', '/vagrant', disabled: true
+
+  config.vm.provider 'virtualbox' do |vb|
+    # Set Memory here:
+    vb.memory = '8192'
+  end
+
+  config.vm.network 'public_network', bridge: [
+    # See: https://www.vagrantup.com/docs/networking/public_network.html#default-network-interface
+    # Set this to your WiFi interface:
+    'wlp3s0'
+  ]
+end
+```
+
+Then, use `vagrant up && vagrant ssh`
+
 Windows users, if Hyper-V is enabled on your computer [you'll need to follow
 these steps][bcd-edit] from Scott Hanselman before VirtualBox will work on your
 computer.
