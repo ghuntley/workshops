@@ -239,12 +239,33 @@ Let's validate your changes have been applied and activated but not committed:
 htop
 ```
 
+Before continuing, remember that running `nixos-rebuild test` meant that the
+changes to your `configuration.nix` got temporarily applied, including the new
+user you created.
+
+So now you can create a password for your user. Remember to substitute your
+username if you used a different one from `workshop`:
+
+```bash
+passwd workshop
+```
+
 Reboot the computer and log back in as `root`. When you re-run the `htop`
 command you'll notice that it isn't installed anymore.
 
 ```bash
 # htop: command not found
 htop
+```
+
+Your user is not there anymore, though the `/home/$username` directory will
+still be there. NixOS does the sane thing and doesn't delete your data, even if
+your user is wiped from /etc/passwd
+
+```bash
+# No passwd entry for user 'workshop'
+su -l workshop
+ls /home
 ```
 
 > 🛈 If you need to validate changes in continuous integration scenarios or
@@ -254,18 +275,6 @@ htop
 > `/etc/nixos/configuration.nix`. Once the virtual machine has been built the
 > virtual machine can be started by running `./result/bin/run-*-vm`.
 
-
-Before continuing, remember running `nixos-rebuild switch` so the changes to
-your `configuration.nix` get applied, including the new user you created. A new
-generation will be created in your Grub menu, and the current
-system configuration will boot by default.
-
-Now you can create a password for your user. Remember to substitute your
-username if you used a different one from `workshop`:
-
-```bash
-passwd workshop
-```
 
 ## 📚 Structure of a configuration.nix file
 
