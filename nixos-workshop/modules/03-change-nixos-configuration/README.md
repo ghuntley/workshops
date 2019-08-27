@@ -114,6 +114,9 @@ Save your configuration and set a password for the workshop account
 passwd workshop
 ```
 
+This will fail, because the user doesn't exist yes. The next section explains
+why and how to fix this.
+
 ## 💡 nixos-rebuild
 
 Changes to `/etc/nixos/configuration.nix` are not applied unless `nixos-rebuild`
@@ -164,7 +167,11 @@ nixos-rebuild`.
 
 ## 🎯 Reboot NixOS and interrupt booting when at the GRUB menu
 
-Reboot your computer and when GRUB appears navigate to `NixOS - All Configurations`
+Now you can reboot your computer. We'll wait.
+
+<waiting expectantly...>
+
+When GRUB appears, navigate to `NixOS - All Configurations`
 
 ![The NixOS GRUB Menu](grub-menu.png)
 
@@ -247,6 +254,18 @@ htop
 > `/etc/nixos/configuration.nix`. Once the virtual machine has been built the
 > virtual machine can be started by running `./result/bin/run-*-vm`.
 
+
+Before continuing, remember running `nixos-rebuild switch` so the changes to
+your `configuration.nix` get applied, including the new user you created. A new
+generation will be created in your Grub menu, and the current
+system configuration will boot by default.
+
+Now you can create a password for your user. Remember to substitute your
+username if you used a different one from `workshop`:
+
+```bash
+passwd workshop
+```
 
 ## 📚 Structure of a configuration.nix file
 
@@ -367,5 +386,11 @@ at as you go through this description.
 
 ## ⏭️ What's next
 
+An advantage of having a purely functional operating system is that system
+configurations are immutable. You can think of them (metaphorically) as git
+commits that can be checked out as easily as the text of the `configuration.nix`
+file itself. Next we'll learn [how to roll back a system configuration].
+
 <!-- in-line links -->
 [fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
+[how to roll back a system configuration]: ../04-roll-back-configuration/README.md
