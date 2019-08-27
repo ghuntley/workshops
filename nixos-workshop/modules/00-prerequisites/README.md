@@ -8,12 +8,14 @@ upwards of 4Gb of software from the internet.
 
 ## ☑️ Software Installation
 
-Attendees will need a computer with Virtual Box installed:
+Attendees will need to bring their own laptop, and download and install the
+following softare:
 
+* [ ] Download the [NixOS graphical installation ISO][download-nixos-iso] which
+      contains the NixOS installer, if they plan to run a full installation
+      either on VirtualBox or on their bare hardware.
 * [ ] Download the [NixOS demo appliance][download-nixos-ova] for VirtualBox (in
       OVA format) that has X11 and Plasma 5 enabled.
-* [ ] Download the [NixOS graphical installation ISO][download-nixos-iso] which
-      contains the NixOS installer.
 * [ ] Download and install [VirtualBox][download-virtualbox].
 * [ ] Download and install [VirtualBox Extension Pack][download-virtualbox-extension-pack].
 
@@ -31,7 +33,9 @@ Then, still within VirtualBox and with the appliance turned off, go into the
    virtual machine settings and change the following details:
 
 * [ ] **System/Motherboard**: Raise memory to 4GB or 8GB, or some
-      `nixos-rebuild` or `nix-env` operations might fail.
+      `nixos-rebuild` or `nix-env` operations might fail with less than 4GB,
+      while running `nix-index` on an install with a large `/nix/store` can fail
+      with less than 8GB of installed memory.
 * [ ] **Network/Adapter2**: Ensure you have your host laptop's WiFi card as
       `Attached to: Bridged Adapter`
 * [ ] **USB**: Disable USB 2.0 and enable 1.1 instead.
