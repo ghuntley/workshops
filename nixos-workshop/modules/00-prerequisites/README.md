@@ -24,11 +24,15 @@ Alternatively, if you are going to use VirtualBox then you'll need to:
 
 * [ ] In VirtualBox, use the menu option `Machine -> New` and configure as follows to create a virtual machine for NixOS:
 
-* [ ] **Name**: NixOS
+* [ ] **NixOS**: NixOS
 * [ ] **Type**: Linux
 * [ ] **Version**: Linux 2.6 / 3.x / 4.x
 * [ ] **Memory**: Raise memory to at least 6GB.
 * [ ] **Hard Drive**: Allocate now and set size to at least 16GB.
+
+* [ ] In VirtualBox, use the menu option `Machine -> Settings` and configure the virtual machine as follows:
+
+* [ ] **System**: Ensure `Enable EFI` is checked.
 
 Windows users, if Hyper-V is enabled on your computer [you'll need to follow these steps][bcd-edit] from Scott Hanselman before VirtualBox will work on your computer.
 
