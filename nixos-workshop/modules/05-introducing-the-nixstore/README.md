@@ -1,4 +1,6 @@
-# Overview
+# Introducing the nixstore
+
+## 📖 Overview
 
 Most of the popular operating systems handle packages well, until, they don’t.
 As long as you are moving in a straight line, alone, you’ll be fine. Things
@@ -40,7 +42,7 @@ The file `/home/john/.nix-profile/bin/vim` then points to a symlink to a file in
 `/nix/store/` that will lead to the actual Vim binary in
 `/nix/store/w4cr4j13lqzry2b8830819vdz3sdypfa-vim-8.0.0329/bin/vim`.
 
-## Activites
+## 🎯 Activities
 
 Let's start by checking that what we just said is true:
 
@@ -130,9 +132,9 @@ $ fd "bash-4.4-p23$" /nix/store
 Or the output of `ncdu` on `/nix/store`:
 
 ```bash
-ncdu 1.14 ~ Use the arrow keys to navigate, press ? for help                    
+ncdu 1.14 ~ Use the arrow keys to navigate, press ? for help
 --- /nix/store -----------------------------------------------------------------
-    1.4 GiB [##########] /q4q4smqwvpla27gbvjzjy5mlymm0q0c3-ghc-8.2.2-binary     
+    1.4 GiB [##########] /q4q4smqwvpla27gbvjzjy5mlymm0q0c3-ghc-8.2.2-binary
     1.4 GiB [######### ] /r0r77in17z6xynbspcpqlmxplvwbz5pc-ghc-8.6.5
     1.4 GiB [######### ] /44zyylbbhabj2d62f7lbb6wmjlllcv10-ghc-8.6.5
     1.4 GiB [######### ] /zs0j8a1rzj1s9n129j05mhc8ds32q9xn-ghc-8.6.5
@@ -153,7 +155,7 @@ ncdu 1.14 ~ Use the arrow keys to navigate, press ? for help
   673.7 MiB [####      ] /3bfgswkdz559y7n1mxpnbrpf...cabal-at-2019-07-29T000000Z
   639.4 MiB [####      ] /fvkaqawargzj3m9s0rjnx7s6...yis-google-fonts-2017-06-28
   591.2 MiB [####      ] /k19zskg6lrpqwc80dinri01x613iangi-hackage-exprs-source
- Total disk usage: 101.1 GiB  Apparent size: 100.3 GiB  Items: 3125663          
+ Total disk usage: 101.1 GiB  Apparent size: 100.3 GiB  Items: 3125663
 ```
 
 Your results may vary. In fact, they will! Try it yourselves.
@@ -227,6 +229,7 @@ note: currently hard linking saves -0.00 MiB
 ```
 
 And now I can't rollback my user environment, because I only have one.
+
 ```bash
 $ nix-env --list-generations
  152   2019-08-27 01:36:45   (current)
@@ -253,8 +256,8 @@ nix.gc = {
 
 Remember to run `nixos-rebuild switch` after you change your configuration.
 
-# What's Next
+## 📚 Additional reading material
 
-
-# References and Acknowledgements
 - [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)
+
+## ⏭️ What's next

@@ -145,4 +145,5 @@ In the [next module][next-module] you'll learn more about the internals of the `
 
 <!-- in-line links -->
 [fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
+
 [next-module]: ../05-introducing-the-nixstore/README.md
