@@ -1,0 +1,10 @@
+
+Glossary:
+- nixpkgs
+- nixos
+- nixops
+- substituters
+- expression
+- derivation
+- "sets" as understood in nix language are unordered collections of key value pairs. Quick explain of sets and recursive sets.
+- :q
