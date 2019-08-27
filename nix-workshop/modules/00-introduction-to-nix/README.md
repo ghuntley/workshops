@@ -84,15 +84,19 @@ and deleting that extra line from `~/.profile`
 
 ### If you're on Windows
 
-Efforts are being made to make Nix and NixOS work under WSL. For now, you can
-download a preinstalled [Ubuntu 18.04 VirtualBox image] server on it, and try
-these parts of the tutorial.
+Efforts are being made to make Nix and NixOS work natively under WSL. For now,
+you have two optionns:
 
-NOTE TO GHUNTLEY: Right now I advise to just install Ubuntu on VBox, because
-I've never been able to get Nix to work on WSL. Happy for you to correct this, 
-since you know how and when it does and doesn't work.
+- you can download a preinstalled [Ubuntu 18.04 VirtualBox image] server on it,
+and try the Nix tutorial there.
+- you can install Nix as a single-user package manager on top of WSL-hosted
+  Ubuntu 18.04 or later. WSL2 is recommended for better performance.
 
 # What's Next
+
+In [the next module] you'll learn about using Nix as a package manager. First
+we'll recap some of the tasks you've already performed, then we'll dive into
+more tasks.
 
 # References and Acknowledgments
 - [Introducing Nix]
@@ -106,3 +110,4 @@ since you know how and when it does and doesn't work.
 [Nix Manual Glossary]: https://nixos.org/nix/manual/#part-glossary
 [Ubuntu 18.04 VirtualBox image]: https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/18.04/18.04.3/S18.04.3VB-64bit.7z/download
 
+[the next module]: ../01-using-nix/README.md
