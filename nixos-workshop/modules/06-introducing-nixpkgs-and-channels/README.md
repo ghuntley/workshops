@@ -1,4 +1,6 @@
-# Overview
+# Introducing nixpkgs and channels
+
+## 📖 Overview
 
 Nixpkgs is the name of the git repository where Nix packages are developed.
 
@@ -139,7 +141,8 @@ nix-channel --roll-back
 1. To list all available packages, $ nix-env -q --available
 1. This tutorial covers Nix 1.x, because the transition to Nix 2 isn't comnplete
 
-# What's Next
+## 📚 Additional reading material
 
-# References and Acknowledgements
-- [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)
+* [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)
+
+## ⏭️ What's next

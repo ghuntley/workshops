@@ -17,11 +17,15 @@ By the end of this module you will have:
 
 ## ✋ Before You Begin
 
-It is assumed that you have downloaded the [prerequisites and configure your
-computer][prerequisites] before.
+It is assumed that you have downloaded the [prerequisites and configured your
+computer][prerequisites].
 
-If you are running the tutorial on a preinstalled appliance on VirtualBox VM, 
-then you're set.
+If you are installing NixOS on your computer as its primary operating system then
+you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso]
+and be comfortable with downloading upwards of 4Gb of data.
+
+
+## 🎯 Installing NixOS from scratch
 
 <details><summary>✋🎯️ At the Melbourne :: C◦mp◦se 2019 Workshop we are running
 a NixOS proxy-cache for the workshop so that the class doesn't become
@@ -71,16 +75,9 @@ proxy-cache is accessible.
 > configuration, or if you don't stuff it up but the caches change after you
 > configure them. For instance, you might need to run `nixos-rebuild --option
 > substituter https://cache.nixos.org/ switch` after you leave the workshop, as
-> the `dymaxion.local` proxy-cache will no longer be accessible. </p> 
+> the `dymaxion.local` proxy-cache will no longer be accessible. </p>
 
 </details>
-
-If you are installing NixOS on your computer as its primary operating system then
-you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso]
-and be comfortable with downloading upwards of 4Gb of data.
-
-
-## 🎯 Installing NixOS from scratch
 
 ### Networking
 
@@ -103,13 +100,8 @@ systemctl restart wpa_supplicant.service
 
 ### Partitioning
 
-Time to destroy some valuable data! Just kidding. You won’t make a mistake, and
-more importantly, you have 3 copies of your data on at least 2 different types
-of storage media and in 2 different physical locations that are unlikely to be
-hit by the same disaster right? Right?!
 
-Jokes aside, this process will wipe anything on the disk. Consider yourself
-warned.
+This process will wipe anything on the disk that you select. Consider yourself warned.
 
 A UEFI boot device requires a GUID partition table (GPT). Hence we’ll be using
 `gdisk` instead of the venerable `fdisk`. If you’re installing on a system that
@@ -138,7 +130,7 @@ LVM partition. LVM (logical volume management) allows us to more easily change
 our partitions (size and layout) should we need. In our case, the LVM partition
 will contain our root and swap partitions.
 
-This code block assumes you’re still at a gdisk prompt.
+This code block assumes you’re still at a `gdisk` prompt.
 
 ```bash
 # Create the EFI boot partition
@@ -184,7 +176,7 @@ cryptsetup luksFormat $LVM_PARTITION
 cryptsetup luksOpen $LVM_PARTITION nixos-enc
 
 # Create the LVM physical volume using nixos-enc
-pvcreate /dev/mapper/nixos-enc 
+pvcreate /dev/mapper/nixos-enc
 
 # Create a volume group that will contain our root and swap partitions
 vgcreate nixos-vg /dev/mapper/nixos-enc

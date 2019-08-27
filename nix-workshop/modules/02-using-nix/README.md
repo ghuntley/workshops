@@ -8,7 +8,7 @@ third-party utilities.
 
 If you have done the NixOS workshop, you will have already used some of these
 programs, like `nix-env` and `nix-channel`, to perform truly essential tasks.
-We'l put these tasks at the beginning, in a "recap" section.
+We'll put these tasks at the beginning, in a "recap" section.
 
 Then we'll focus on several activities, and how to perform them, rather than
 focus on the tools themselves. The executables come with very good manpages and
@@ -17,7 +17,6 @@ focus on the tools themselves. The executables come with very good manpages and
 This module doesn't contain any NixOS-specific commands, and can be worked
 through on a regular user account, either on NixOS or on any other Nix-enabled
 OS.
-
 
 ## 🗹 Recap
 
@@ -59,8 +58,6 @@ you started at the Nix tutorial, this is your chance to catch up:
 
 * TODO
 
-
-## Acknowledgements and References
 
 ## 📚 Additional reading material
 

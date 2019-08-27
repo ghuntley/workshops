@@ -9,13 +9,9 @@ upwards of 4Gb of software from the internet.
 ## ☑️ Software Installation
 
 Attendees will need to bring their own laptop, and download and install the
-following softare:
+following software:
 
-* [ ] Download the [NixOS graphical installation ISO][download-nixos-iso] which
-      contains the NixOS installer, if they plan to run a full installation
-      either on VirtualBox or on their bare hardware.
-* [ ] Download the [NixOS demo appliance][download-nixos-ova] for VirtualBox (in
-      OVA format) that has X11 and Plasma 5 enabled.
+* [ ] Download the [NixOS graphical installation ISO][download-nixos-iso] which contains the NixOS installer.
 * [ ] Download and install [VirtualBox][download-virtualbox].
 * [ ] Download and install [VirtualBox Extension Pack][download-virtualbox-extension-pack].
 
@@ -26,21 +22,20 @@ you'll need to [burn the installation ISO to a USB drive or DVD][burn-the-iso].
 
 Alternatively, if you are going to use VirtualBox then you'll need to:
 
-* [ ] In VirtualBox, use the menu option `File -> Import Appliance` and import
-      the [NixOS demo appliance][download-nixos-ova].
+* [ ] In VirtualBox, use the menu option `Machine -> New` and configure as follows to create a virtual machine for NixOS:
 
-Then, still within VirtualBox and with the appliance turned off, go into the
-   virtual machine settings and change the following details:
+    * [ ] **NixOS**: NixOS
+    * [ ] **Type**: Linux
+    * [ ] **Version**: Linux 2.6 / 3.x / 4.x
+    * [ ] **Memory**: Raise memory to at least 6GB.
+    * [ ] **Hard Drive**: Allocate now and set size to at least 16GB.
 
-* [ ] **System/Motherboard**: Raise memory to 4GB or 8GB, or some
-      `nixos-rebuild` or `nix-env` operations might fail with less than 4GB,
-      while running `nix-index` on an install with a large `/nix/store` can fail
-      with less than 8GB of installed memory.
-* [ ] **Network/Adapter2**: Ensure you have your host laptop's WiFi card as
-      `Attached to: Bridged Adapter`
-* [ ] **USB**: Disable USB 2.0 and enable 1.1 instead.
+* [ ] In VirtualBox, use the menu option `Machine -> Settings` and configure the virtual machine as follows:
 
-You could also use [Vagrant](https://www.vagrantup.com/docs/index.html) to manage the VirtualBox machine. This will provide you with a headless machine which you can SSH into. Write out the the following Vagrantfile:
+    * [ ] **System**: Ensure `Enable EFI` is checked.
+
+You could also use [Vagrant](https://www.vagrantup.com/docs/index.html) to manage the VirtualBox machine. This will
+provide you with a headless machine which you can SSH into. Write out the the following Vagrantfile:
 ```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
