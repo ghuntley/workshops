@@ -139,14 +139,10 @@ git commit -m "checkpoint commit"
 
 ## ⏭️ What's next
 
-We have seen that NixOS can revert whole system configurations as if they were
-version-controlled. Not the configuration file, but the whole system's
-configuration, including installed software and users on the system.
+We have seen that NixOS can revert whole system configurations as if they were version-controlled. Not the configuration file, but the whole system's configuration, including installed software and users on the system. This is because NixOS is built on top of the purely functional Nix package manager, which manages system configurations as one more of the artifacts in the `/nix` store.
 
-This is because NixOS is built on top of the purely functional Nix package
-manager, which manages system configurations as one more of the artifacts in its
-[Nix store].
+In the [next module][next-module] you'll learn more about the internals of the `/nix` store.
 
 <!-- in-line links -->
 [fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
-[Nix store]: ../05-introducing-the-nixstore/README.md
+[next-module]: ../05-introducing-the-nixstore/README.md
