@@ -9,7 +9,7 @@ upwards of 4Gb of software from the internet.
 ## ☑️ Software Installation
 
 Attendees will need to bring their own laptop, and download and install the
-following softare:
+following software:
 
 * [ ] Download the [NixOS graphical installation ISO][download-nixos-iso] which
       contains the NixOS installer, if they plan to run a full installation

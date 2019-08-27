@@ -1,6 +1,6 @@
 # Introduction to Nix
 
-##    Overview
+## 📖 Overview
 
 This workshop provides a view of Nix, the purely functional package manager, and
 the Nix expression language, which is used to define packages for Nix.
@@ -23,8 +23,11 @@ By the end of this module you will:
   computer.
 * Learn how to use basic Nix commands to install and manage packages.
 
+## ✋ Before You Begin
 
-## What is Nix
+You need to have the Nix package manager installed on your computer. Per-platform installation instructions can be found in the [previous module][previous-module].
+
+## 💡 What is Nix
 
 Nix is a purely functional package manager.
 
@@ -85,29 +88,30 @@ and deleting that extra line from `~/.profile`
 ### If you're on Windows
 
 Efforts are being made to make Nix and NixOS work natively under WSL. For now,
-you have two optionns:
+you have two options:
 
 - you can download a preinstalled [Ubuntu 18.04 VirtualBox image] server on it,
 and try the Nix tutorial there.
 - you can install Nix as a single-user package manager on top of WSL-hosted
   Ubuntu 18.04 or later. WSL2 is recommended for better performance.
 
-# What's Next
+## 📚 Additional reading material
 
-In [the next module] you'll learn about using Nix as a package manager. First
+* [Introducing Nix]
+* [Getting started with Nix]
+* [Nix Manual Glossary]
+
+## ⏭️ What's next
+
+In [the next module][next-module] you'll learn about using Nix as a package manager. First
 we'll recap some of the tasks you've already performed, then we'll dive into
 more tasks.
-
-# References and Acknowledgments
-- [Introducing Nix]
-- [Getting started with Nix]
-- [Nix Manual Glossary]
 
 <!-- in-line links -->
 [About Nix]: http://nixos.org/nix/manual/#ch-about-nix
 [Introducing Nix]: http://qfpl.io/posts/nix/introducing-nix/
 [Getting started with Nix]: http://qfpl.io/posts/nix/getting-started-with-nix/
 [Nix Manual Glossary]: https://nixos.org/nix/manual/#part-glossary
-[Ubuntu 18.04 VirtualBox image]: https://sourceforge.net/projects/osboxes/files/v/vb/59-U-u-svr/18.04/18.04.3/S18.04.3VB-64bit.7z/download
 
-[the next module]: ../01-using-nix/README.md
+[previous-module]: ../00-prerequisites/README.md
+[next-module]: ../01-using-nix/README.md

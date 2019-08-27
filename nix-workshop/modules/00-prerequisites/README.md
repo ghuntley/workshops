@@ -10,9 +10,12 @@ No configuration needed as the nix package manager is already installed! 🎉
 
 ## ☑️ Debian, Ubuntu, Arch, RedHat and macOS
 
-* [ ] Download and install the [latest recommended version][download-nix] of the Nix Package Manager which is currently `v2.2.2`:
+* [ ] Login to Ubuntu via WSL, download and install the [latest recommended version][download-nix] of the Nix Package Manager which is currently `v2.2.2`. If a [newer version is available][download-nix], install that instead and send in a pull-request to update this document.
 
 ```bash
+sudo mkdir /nix
+sudo chown $USER /nix
+
 curl -o install-nix-2.2.2 https://nixos.org/nix/install
 curl -o install-nix-2.2.2.sig https://nixos.org/nix/install.sig
 gpg2 --recv-keys B541D55301270E0BCF15CA5D8170B4726D7198DE
@@ -20,7 +23,14 @@ gpg2 --verify ./install-nix-2.2.2.sig
 sh ./install-nix-2.2.2
 ```
 
-If a [newer version is available][download-nix], install that instead and send in a pull-request to update this document.
+The installer will initialize `/nix` and add the following to `~./profile`:
+
+```bash
+if [ -e /home/USERNAME/.nix-profile/etc/profile.d/nix.sh ]; \
+then . /home/NAME/.nix-profile/etc/profile.d/nix.sh; fi
+```
+
+You can uninstall nix at any time by deleting `/nix` and removing the above lines from `~./profile`.
 
 ## ☑️ Windows 10
 
@@ -28,11 +38,14 @@ If a [newer version is available][download-nix], install that instead and send i
 
 * [ ] [Developer Mode in Windows 10 enabled](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development)
 * [ ] [Install the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-* [ ] [Install Ubuntu 18.04 LTS for Windows Subsystem for Linnux](https://www.microsoft.com/en-au/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab)
+* [ ] [Install Ubuntu 18.04 LTS for Windows Subsystem for Linux](https://www.microsoft.com/en-au/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab)
 
-* [ ] Login to Ubuntu via WSL, download and install the [latest recommended version][download-nix] of the Nix Package Manager which is currently `v2.2.2`:
+* [ ] Login to Ubuntu via WSL, download and install the [latest recommended version][download-nix] of the Nix Package Manager which is currently `v2.2.2`. If a [newer version is available][download-nix], install that instead and send in a pull-request to update this document.
 
 ```bash
+sudo mkdir /nix
+sudo chown $USER /nix
+
 curl -o install-nix-2.2.2 https://nixos.org/nix/install
 curl -o install-nix-2.2.2.sig https://nixos.org/nix/install.sig
 gpg2 --recv-keys B541D55301270E0BCF15CA5D8170B4726D7198DE
@@ -40,8 +53,14 @@ gpg2 --verify ./install-nix-2.2.2.sig
 sh ./install-nix-2.2.2
 ```
 
-If a [newer version is available][download-nix], install that instead and send in a pull-request to update this document.
+The installer will initialize `/nix` and add the following to `~./profile`:
 
+```bash
+if [ -e /home/USERNAME/.nix-profile/etc/profile.d/nix.sh ]; \
+then . /home/NAME/.nix-profile/etc/profile.d/nix.sh; fi
+```
+
+You can uninstall nix at any time by deleting `/nix` and removing the above lines from `~./profile`.
 
 ## What's next
 
