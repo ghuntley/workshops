@@ -23,7 +23,7 @@ Analysis of `dymaxion:configuration.nix` from this point of view
 
 ## ⏭️ What's next
 
-We move on to
+We move on to building stuff with Nix. Yay.
 
 
 <!-- in-line links -->

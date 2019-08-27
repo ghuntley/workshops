@@ -21,11 +21,44 @@ OS.
 
 ## 🗹 Recap
 
-* 
+We've already been using the Nix package manager during the NixOS tutorial. If
+you started at the Nix tutorial, this is your chance to catch up:
 
-## Task 1
+* We installed software with `nix-env -iA nixos.$PACKAGE`
+* We searched packages with `nix-env -qaP | grep $PACKAGE`
+* We listed generations of the current profile with `nix-env --list-generations`
+* We cleared up unused builds from the `/nix/store` with `nix-collect-garbage`
+* We queried available package channels with `nix-channel --list`
+* We added a channel with `nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs`
+* We updated the channel package list with `nix-channel --update` or `nix-channel -u`
+* We rolled-back the channel state with `nix-channel --roll-back`
 
-## Task 2
+## Installing Software
+
+* Notes: -i and -q use a "package selector" which is a regex that will match a
+  symbolic package name. More than one package can share a symbolic package
+  name.
+* Why we use the -A toggle, and what's -f Maybe don't delve into `./nix-defexpr`
+  now, wait until we look at nixpkgs/channels again
+* What happens when we don't use the -A toggle.
+* TODO What to install in the OS, what to install in the user, what to install in nix-shells.
+* TODO Installing Python programs versus libraries (JC: TODO)
+
+## Removing Software
+
+* Removing a package with --remove (-r): easy peasy.
+* We still haven't seen garbage removal. Coming soon!
+
+## Searching
+
+* `nix-env -q` vs `nix-env -qa` vs `nix-env -qaP`
+* Nix 2 on the horizon: `nix search`
+
+
+## Task 3
+
+* TODO
+
 
 ## Acknowledgements and References
 
