@@ -21,8 +21,8 @@ versions of a software, without collisions from the other versions. John, Mary,
 and Peter can all have their versions of Firefox without conflicting with the
 other versions.
 
-How does Nixpkgs do it? It does it by naming components by the
-computed checksum of their inputs, and by not using a common global location.
+How does Nix do it? It does it by naming components by the computed checksum of
+their inputs, and by not using a common global location.
 
 Each user has their own versions of `~/.nix-profile`, and all of the contents of
 those directories do not contain regular files. Instead, they are all symbolic
@@ -254,6 +254,7 @@ nix.gc = {
 Remember to run `nixos-rebuild switch` after you change your configuration.
 
 # What's Next
+
 
 # References and Acknowledgements
 - [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix)

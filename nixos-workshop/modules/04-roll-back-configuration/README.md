@@ -31,8 +31,12 @@ went well then you should now be looking at a X11 login prompt:
 ## 🎯 Reboot to the previous configuration
 
 Let's reboot your computer and boot back into the previous configuration which
-did not have X11 configured. Reboot your computer and when GRUB appears navigate
-to `NixOS - All Configurations`
+did not have X11 configured, if you are following the bare hardware install
+workshop, or did not have `htop` and your user, if you're following the
+VirtualBox appliance workshop.
+
+Reboot your computer and when GRUB appears navigate to `NixOS - All
+Configurations`
 
 ![The NixOS GRUB Menu](grub-menu.png)
 
@@ -134,3 +138,15 @@ git commit -m "checkpoint commit"
 ## 📚 Additional reading material
 
 ## ⏭️ What's next
+
+We have seen that NixOS can revert whole system configurations as if they were
+version-controlled. Not the configuration file, but the whole system's
+configuration, including installed software and users on the system.
+
+This is because NixOS is built on top of the purely functional Nix package
+manager, which manages system configurations as one more of the artifacts in its
+[Nix store].
+
+<!-- in-line links -->
+[fhs-standard]: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
+[Nix store]: ../05-introducing-the-nixstore/README.md
