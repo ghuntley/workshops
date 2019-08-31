@@ -5,10 +5,6 @@
 This workshop provides a view of Nix, the purely functional package manager, and
 the Nix expression language, which is used to define packages for Nix.
 
-> 🛈 For the rest of this tutorial we'll use "Nixlang" interchangeably with the
-> longer phrase 'Nix expression language' whenever we feel the need to prevent
-> potential confusion.
-
 Nix can be used as a package manager on non-NixOS GNU/Linux distributions as
 well as on MacOS, so this section of the tutorial is useful even if you don't
 plan to run NixOS full time. If you' re using a GNU/Linux distro, Nix can be
@@ -19,6 +15,9 @@ or Homebrew.
 By the end of this module you will:
 
 * Learn what the Nix package manager is, and how it improves the status quo
+  over other forms of Unix packages.
+* Be able to write simple Nix expressions to describe, build and install
+  packages in several language platforms.
 
 ## ✋ Before You Begin
 
@@ -26,9 +25,7 @@ You need to have the Nix package manager installed on your computer before
 proceeding. Per-platform installation instructions can be found in the [previous
 module][previous-module].
 
-## 💡 What is Nix
-
-Nix is a purely functional package manager.
+## 💡 What is the Nix package manager
 
 Every package has a hash based on everything that was used to build it, and the
 package outputs are placed in an immutable store that is keyed on that hash.
@@ -49,6 +46,16 @@ benefits of Nix. In summary, we get these benefits:
 That idea can be extended to managing a whole Linux distribution (NixOS) a fleet
 of machines (NixOps), but here we're looking at the package manager.
 
+## 💡 What is the Nix expression language
+
+The Nix expression language is a pure, lazy, functional language.
+
+- Purity means that operations in the language don't have side-effects (for instance, there is no variable assignment). The only side effects are deliberate and controlled, and aimed at its main function of building software packages.
+- Laziness means that arguments to functions are evaluated only when they are needed. 
+- Functional means that functions are “normal” values that can be passed around and manipulated in interesting ways.
+
+The language is not a full-featured, general purpose language. Its main job is to describe packages, compositions of packages, and the variability within packages.
+u
 ## 📚 Additional reading material
 
 * [Introducing Nix]
