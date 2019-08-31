@@ -4,23 +4,45 @@
 
 The Nix expression language is a pure, lazy, functional language.
 
-- Purity means that operations in the language don't have side-effects (for instance, there is no variable assignment). The only side effects are deliberate and controlled, and aimed at its main function of building software packages.
-- Laziness means that arguments to functions are evaluated only when they are needed. 
-- Functional means that functions are “normal” values that can be passed around and manipulated in interesting ways.
+- Purity means that operations in the language don't have side-effects (for
+  instance, there is no variable assignment). The only side effects are
+  deliberate and controlled, and aimed at its main function of building software
+  packages.
+- Laziness means that arguments to functions are evaluated only when they are
+  needed.
+- Functional means that functions are “normal” values that can be passed around
+  and manipulated in interesting ways.
 
-The language is not a full-featured, general purpose language. Its main job is to describe packages, compositions of packages, and the variability within packages.
+The language is not a full-featured, general purpose language. Its main job is
+to describe packages, compositions of packages, and the variability within
+packages.
 
-Depending on how much time you have and how deep you want to dive, we recommend you follow these three courses of action:
+To learn the Nix language recommend you take the following steps in order:
 
-1. [Learn Nix in Y minutes-internal ref], which can be done from top to bottom in 15 minutes.
-2. [Nix by Example-internal] adds content and nuance. After doing the above, it can take 30 minutes or more.
-3. [A tour of Nix-internal ref] is a longer (1h+) interactive dive into the Nix programming language, covering a good number of built-in and library functions.
+1. Read [Learn Nix in Y minutes-internal ref], which can be followed along on
+   `nix repl` from top to bottom in Y minutes, for values of Y between 15 and
+   30.
+1. Read our version of [Nix by Example-internal], which adds exposition and
+   nuance. James Fisher's original article is delightful, but the version
+   included in this workshop has been edited down to "pragmatic" in the interest
+   of time. If delight and deeper understanding of laziness and its
+   possibilities is what you're looking for, the acknowledgements section has a
+   link to the original. Our version preserves an explanation of mutually
+   recursive attribute set defintions, as well as of error handling and
+   debugging.
+1. [A tour of Nix-internal ref] is an interactive dive into the Nix programming
+   language, covering a good number of built-in and library functions. At the
+   end, you'll be writing recursive function and re-implementing the builtins.
+   This easily takes over an hour so, depending on the time alloted for your
+   workshop, you may want to leave it as a take-home exercise set.
 
-https://nixos.wiki/wiki/Nix_Expression_Language
 
 ## Learn Nix in Y minutes
 
-A good introduction to the Nix Expression Language is in [Learn Nix in Y minutes]. We've copied it here and updated it for this workshop, as the last update in the site was for a Nix version previous to 2.0, and the latest 
+A good introduction to the Nix Expression Language is in [Learn Nix in Y
+minutes]. We've copied it here and updated it for this workshop, as the last
+update in the site was for a Nix version previous to 2.0, and the latest Nix
+version at the time of running our workshop is 2.2.2.
 
 We recommend you follow these examples using [`nix repl`].
 
@@ -287,7 +309,10 @@ with builtins; [
       a + b))
   #=> 7
 
-  # This first line of tutorial starts with "with builtins;" # because builtins is a set the contains all of the built-in # functions (length, head, tail, filter, etc.). This saves # us from having to write, for example, "builtins.length"
+  # This first line of tutorial starts with "with builtins;"
+  # because builtins is a set the contains all of the built-in 
+  # functions (length, head, tail, filter, etc.). This saves 
+  # us from having to write, for example, "builtins.length"
   # instead of just "length".
 
 
@@ -343,8 +368,8 @@ with builtins; [
   #=========================================
 
   # Because repeatability of builds is critical to the Nix package
-  # manager, in which, functional purity is emphasized in the Nix
-  # language. But there are a few impurities.
+  # manager, functional purity is emphasized in the Nix language
+  # used to describe Nix packages. But there are a few impurities.
 
   # You can refer to environment variables.
   (getEnv "HOME")
@@ -377,7 +402,7 @@ https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55
 
 ## A tour of Nix
 
-[A tour of Nix] rocks. If you have an hour or more, it will give you the deep
+[A tour of Nix] rocks. You'll need more than an hour, but it will give you the deep
 dive you need to become conversant with the Nix language. Take your time, and
 consult the [Nix Expression Language section of the Nix manual] as you go along.
 
@@ -391,12 +416,21 @@ Analysis of `dymaxion:configuration.nix` from this point of view
 
 ## Acknowledgements
 
-[Learn Nix in Y minutes] was originally authored by Chris Martin.
+* [Learn Nix in Y minutes] was originally authored by Chris Martin.
+* [Nix by example] was originally authored by James Fisher.
+* [A tour of Nix] is by Joachim Schiele and Paul Seitz. We haven't included any
+  of their code or explanations in our workshop, but we're deeply thankful for
+  their work.
 
 ## 📚 Additional material
 
 * The ur-reference is the [Nix expression Language section of the Nix manual]
-* For anyone struggling with some of the concepts there is a good explanation of the [Nix language in the Nix Wiki].
+* For anyone struggling with some of the concepts there is a good explanation of
+  the [Nix language in the Nix Wiki].
+* The version of [Nix by Example] in this workshop has been abridged. The
+  original has more content, including an explanation of parse trees in Nix, as
+  well as how to exploit the laziness of attribute sets to implement infinite
+  data structures.
 
 ## ⏭️ What's next
 
@@ -408,5 +442,6 @@ We move on to building stuff with Nix. Yay.
 [Nix Expression Language section of the Nix manual]: https://nixos.org/nix/manual/#ch-expression-language
 [Nix language in the Nix Wiki]: https://nixos.wiki/wiki/Nix_Expression_Language
 [Learn Nix in Y minutes]: https://learnxinyminutes.com/docs/nix/
+[Nix by example]: https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55
 [A tour of Nix]: https://nixcloud.io/tour/
 [`nix repl`]: https://nixos.org/nix/manual/#ssec-relnotes-2.0
