@@ -62,8 +62,18 @@
     {
       "login": "dalaing",
       "name": "Dave Laing",
-      "avatar_url": https://avatars0.githubusercontent.com/u/1106348?s=460&v=4"",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1106348?s=460&v=4",
       "profile": "http://qfpl.io/people/dalaing/",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "chris-martin",
+      "name": "Chris Martin",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/399718?s=460&v=4",
+      "profile": "https://chris-martin.org/",
       "contributions": [
         "doc",
         "code"
