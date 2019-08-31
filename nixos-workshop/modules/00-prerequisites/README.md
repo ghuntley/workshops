@@ -49,6 +49,7 @@ operating system.
 [download-virtualbox]: https://www.virtualbox.org/wiki/Downloads
 [download-virtualbox-extension-pack]: https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack
 [download-nixos-iso]: https://releases.nixos.org/nixos/19.03/nixos-19.03.173307.776d66ec115/nixos-graphical-19.03.173307.776d66ec115-x86_64-linux.iso
-[download-nixos-ova]: https://releases.nixos.org/nixos/19.03/nixos-19.03.173251.56d94c8c69f/nixos-19.03.173251.56d94c8c69f-x86_64-linux.ova
+[download-nixos-ova]: https://releases.nixos.org/nixos/19.03/nixos-19.03.173201.defa89ffaef/nixos-19.03.173201.defa89ffaef-x86_64-linux.ova
+
 
 [next-module]: ../01-introduction-to-nixos/README.md
