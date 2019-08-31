@@ -22,7 +22,9 @@ By the end of this module you will:
 
 ## ✋ Before You Begin
 
-You need to have the Nix package manager installed on your computer before proceeding. Per-platform installation instructions can be found in the [previous module][previous-module].
+You need to have the Nix package manager installed on your computer before
+proceeding. Per-platform installation instructions can be found in the [previous
+module][previous-module].
 
 ## 💡 What is Nix
 

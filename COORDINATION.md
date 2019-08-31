@@ -29,12 +29,23 @@
 
 - nix
   - 00-introduction-to-nix
+      - Nix is two things:
+        - The Package Manager
+          - Main commands
+            - nix-env
+            - nix-shell
+            - nix-build
+            - nix-store
+          - Utilities
+            - nix-channel
+            - nix-collect-garbage
+            - nix-daemon
       - Javier dibs this one
-  - 01-the-nix-language
+  - 01-using-nix
+      - Question: do you mean using nix the package manager? As if you install Nix on Ubuntu/MacOS?
+  - 02-the-nix-language
       - The wiki is great for the explainer.
       - Javier dibs this one.
-  - 02-using-nix
-      - Question: do you mean using nix the package manager? As if you install Nix on Ubuntu/MacOS?
   - 03-building-applications
     - dotnet-example
     - golang-example

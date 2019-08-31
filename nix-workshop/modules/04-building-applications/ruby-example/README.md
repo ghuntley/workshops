@@ -32,7 +32,12 @@ gem 'jekyll-redirect-from'
 Let's create a temporary shell containing our bundix and ruby-devEnv
 dependencies, use `bundle lock` to generate a `Gemfile.lock` file, and then use
 bundix to generate the `gemset.nix` file to convert the ruby-universe
-dependencies into nixpkgs dependencies:
+dependencies into nixpkgs dependencies.
+
+Remember `nix-shell` is the command you use to generate a shell that has build
+dependencies for something. In this case, not the build dependencies for the
+Compose Conference website, but the build dependencies for the "nixification"
+process of the website building tools:
 
 ```
 $ nix-shell -p ruby.devEnv bundix
