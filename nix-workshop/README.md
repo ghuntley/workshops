@@ -38,4 +38,4 @@ These workshops are made available under the [CC-BY-SA-4.0][license]. If you use
 <!-- in-line links -->
 [license]: ../LICENSE.md
 [share-feedback]: https://github.com/ghuntley/workshops/issues/new?labels=feedback%2C+untriaged&template=feedback.md
-[prerequisites]: ./00-prerequisites
+[prerequisites]: ./modules/00-prerequisites
