@@ -4,10 +4,11 @@
 
 ## Topics Covered
 
- 
+
 ## Computer Setup
 
-Attendees will need computer with [virtual box installed][developer-environment-setup].
+Attendees will need a computer with either Linux, macOS or Windows 10 (with WSL enabled and Ubuntu installed) installed on it. See [prerequisites][prerequisites].
+
 
 ## Legend
 
@@ -37,3 +38,4 @@ These workshops are made available under the [CC-BY-SA-4.0][license]. If you use
 <!-- in-line links -->
 [license]: ../LICENSE.md
 [share-feedback]: https://github.com/ghuntley/workshops/issues/new?labels=feedback%2C+untriaged&template=feedback.md
+[prerequisites]: ./00-prerequisites
