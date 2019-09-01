@@ -7,8 +7,7 @@
 
 ## Computer Setup
 
-Attendees will need a computer with either Linux, macOS or Windows 10 (with WSL enabled and Ubuntu installed) installed on it. See [prerequisites][prerequisites].
-
+Attendees will need a computer with either Linux, macOS or Windows 10 (with WSL enabled and Ubuntu installed) installed on it. Per-platform installation instructions can be found in the [prerequisites][prerequisites] module.
 
 ## Legend
 
