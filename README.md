@@ -1,4 +1,4 @@
-# workshops [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
+# workshops [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
 
 
 # see also
@@ -27,6 +27,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ebzzry.io"><img src="https://avatars3.githubusercontent.com/u/7875?v=4" width="100px;" alt="Rommel MARTINEZ"/><br /><sub><b>Rommel MARTINEZ</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=ebzzry" title="Code">💻</a> <a href="https://github.com/ghuntley/workshops/commits?author=ebzzry" title="Documentation">📖</a></td>
     <td align="center"><a href="https://jameshfisher.com"><img src="https://avatars2.githubusercontent.com/u/166966?v=4" width="100px;" alt="James Harrison Fisher"/><br /><sub><b>James Harrison Fisher</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=jameshfisher" title="Code">💻</a> <a href="https://github.com/ghuntley/workshops/commits?author=jameshfisher" title="Documentation">📖</a></td>
     <td align="center"><a href="http://qfpl.io/people/ajmcmiddlin/"><img src="https://avatars1.githubusercontent.com/u/1066870?v=4" width="100px;" alt="Andrew"/><br /><sub><b>Andrew</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=ajmcmiddlin" title="Documentation">📖</a> <a href="https://github.com/ghuntley/workshops/commits?author=ajmcmiddlin" title="Code">💻</a></td>
+    <td align="center"><a href="http://qfpl.io/people/dalaing/"><img src="https://avatars0.githubusercontent.com/u/1106348?s=460&v=4" width="100px;" alt="Dave Laing"/><br /><sub><b>Dave Laing</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=dalaing" title="Documentation">📖</a> <a href="https://github.com/ghuntley/workshops/commits?author=dalaing" title="Code">💻</a></td>
+    <td align="center"><a href="https://chris-martin.org/"><img src="https://avatars2.githubusercontent.com/u/399718?s=460&v=4" width="100px;" alt="Chris Martin"/><br /><sub><b>Chris Martin</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=chris-martin" title="Documentation">📖</a> <a href="https://github.com/ghuntley/workshops/commits?author=chris-martin" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/rubberydub"><img src="https://avatars3.githubusercontent.com/u/14562624?v=4" width="100px;" alt="Franz Luther Neulist Carroll"/><br /><sub><b>Franz Luther Neulist Carroll</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=rubberydub" title="Documentation">📖</a></td>
   </tr>
 </table>
 
