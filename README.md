@@ -31,7 +31,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://chris-martin.org/"><img src="https://avatars2.githubusercontent.com/u/399718?s=460&v=4" width="100px;" alt="Chris Martin"/><br /><sub><b>Chris Martin</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=chris-martin" title="Documentation">📖</a> <a href="https://github.com/ghuntley/workshops/commits?author=chris-martin" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/rubberydub"><img src="https://avatars3.githubusercontent.com/u/14562624?v=4" width="100px;" alt="Franz Luther Neulist Carroll"/><br /><sub><b>Franz Luther Neulist Carroll</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=rubberydub" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/rubberydub"><img src="https://avatars3.githubusercontent.com/u/14562624?v=4" width="100px;" alt="Franz Luther Neulist Carroll"/><br /><sub><b>Franz Luther Neulist Carroll</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=rubberydub" title="Documentation">📖</a> <a href="https://github.com/ghuntley/workshops/commits?author=rubberydub" title="Code">💻</a></td>
   </tr>
 </table>
 
