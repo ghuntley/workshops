@@ -32,8 +32,7 @@ Alternatively, if you are going to use VirtualBox then you'll need to:
 
 * [ ] In VirtualBox, use the menu option `Machine -> Settings` and configure the virtual machine as follows:
 
-    * [ ] **System**: Ensure `Enable EFI` is checked.
-    * [ ] **Display**: Ensure that the graphics Controller is set as `VBoxSVGA` and Video Memory is set to least `64Mb`.
+    * [ ] **Display**: Ensure that the graphics Controller is set as `VBoxVGA` (not SVGA) and Video Memory is set to least `64Mb`.
     * [ ] **Storage**: Under `Controller IDE`, attach the [NixOS graphical installation ISO][download-nixos-iso].
 
 Windows users, if Hyper-V is enabled on your computer [you'll need to follow
