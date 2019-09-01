@@ -1,4 +1,5 @@
 {
+    "editor.wordWrap": "on",
     "files.autoSave": "afterDelay",
     "plantuml.exportFormat": "png",
     "plantuml.exportOutDir": "./",
