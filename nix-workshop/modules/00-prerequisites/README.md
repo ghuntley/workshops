@@ -35,7 +35,7 @@ Then, use `vagrant up && vagrant ssh`
 
 ## ☑️ Debian, Ubuntu, Arch, RedHat and macOS
 
-* [ ] Login to Ubuntu via WSL, download and install the [latest recommended version][download-nix] of the Nix Package Manager which is currently `v2.2.2`. If a [newer version is available][download-nix], install that instead and send in a pull-request to update this document.
+* [ ] Download and install the [latest recommended version][download-nix] of the Nix Package Manager which is currently `v2.2.2`. If a [newer version is available][download-nix], install that instead and send in a pull-request to update this document.
 
 ```bash
 sudo mkdir /nix
