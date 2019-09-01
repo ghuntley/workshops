@@ -102,10 +102,6 @@ systemctl restart wpa_supplicant.service
 
 This process will wipe anything on the disk that you select. Consider yourself warned.
 
-A UEFI boot device requires a GUID partition table (GPT). Hence we’ll be using
-`gdisk` instead of the venerable `fdisk`. If you’re installing on a system that
-doesn’t use UEFI, then you can do a similar job with good ’ol `fdisk`.
-
 To start, delete any existing partitions and start with a clean slate:
 
 ```bash
@@ -114,7 +110,7 @@ To start, delete any existing partitions and start with a clean slate:
 lsblk
 
 # Open gdisk on the disk we're installing on
-gdisk $DISK
+fdisk $DISK
 
 # print the partitions on the disk
 Command: p
@@ -124,12 +120,12 @@ Command: p
 Command: d
 ```
 
-Now you'll need to create the partitions we need: an EFI boot partition, and an
+Now you'll need to create the partitions we need: an boot partition, and an
 LVM partition. LVM (logical volume management) allows us to more easily change
 our partitions (size and layout) should we need. In our case, the LVM partition
 will contain our root and swap partitions.
 
-This code block assumes you’re still at a `gdisk` prompt.
+This code block assumes you’re still at a `fdisk` prompt.
 
 ```bash
 # Create the EFI boot partition
@@ -137,14 +133,22 @@ Command: n
 Partition number: 1
 First sector: <enter for default>
 Last sector: +1G       --  make a 1 gigabyte partition
-Hex code or GUID: ef00 -- this is the EFI System type
+Hex code or GUID: 83   -- this is the Linux type
 
 # Create the LVM partition
 Command: n
 Partition number: 2
 First sector: <enter for default>
 Last sector: <enter for default - rest of disk>
-Hex code or GUID: 8e00 -- Linux LVM type
+
+# Change partition types
+Command: t
+Partition number: 1
+Hex code or GUID: 83  -- Linux type
+
+Command: t
+Partition number: 2
+Hex code or GUID: 8e  -- Linux LVM type
 
 # Write changes and quit
 Command: w
@@ -214,7 +218,7 @@ swapon /dev/nixos-vg/swap
 You're almost there. Now it’s time to mount the partitions you created, put your
 system configuration in place, and finally, install NixOS.
 
-The snippet below uses `$BOOT_PARTITION` as a placeholder for the UEFI boot
+The snippet below uses `$BOOT_PARTITION` as a placeholder for the boot
 partition we created earlier. This was the first partition on the disk, and will
 probably be something like `/dev/sda1` or `/dev/nvme0n1p1`.
 
@@ -267,11 +271,10 @@ boot.initrd.luks.devices = [
 ];
 ```
 
-NixOS also needs to know that we’re using EFI, however it may have been
-correctly configured for you automatically.
+NixOS also needs to know where grub should be installed, it should be something like `/dev/sda` or `/dev/nvme0n1`.
 
 ```nix
-boot.loader.systemd-boot.enable = true
+boot.loader.grub.device = "/dev/sda";
 ```
 
 If you are installing NixOS as your primary operating system, now would be a
