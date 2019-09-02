@@ -107,8 +107,8 @@ That's right: other, lesser package managers reuse the same package name for
 binaries that aren't identical. Under Nix, different files will have different
 names.
 
-There is a tradeoff though. Check out the amount of cruft that can accumulate in
-the /nix/store over time:
+There is a tradeoff though. Check out this example of the amount of cruft that
+can accumulate in the /nix/store over time:
 
 ```bash
 $ fd "bash-4.4-p23$" /nix/store
