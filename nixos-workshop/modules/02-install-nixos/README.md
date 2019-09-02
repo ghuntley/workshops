@@ -182,7 +182,7 @@ cryptsetup luksFormat $LVM_PARTITION
 cryptsetup luksOpen $LVM_PARTITION nixos-enc
 
 # Create the LVM physical volume using nixos-enc
-pvcreate $LVM_PARTITION /dev/mapper/nixos-enc
+pvcreate /dev/mapper/nixos-enc
 
 # Create a volume group that will contain our root and swap partitions
 vgcreate nixos-vg /dev/mapper/nixos-enc
