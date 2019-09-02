@@ -12,7 +12,7 @@ https://github.com/ghuntley/workshops/
 
 ## WiFi
 
-** IMPORTANT ** Write down your username and guest password.
+**IMPORTANT** Write down your username and guest password.
 
 - The SSID is `...`
 - If you aren't prompted to login visit "http://neverssl.com" in your browser
