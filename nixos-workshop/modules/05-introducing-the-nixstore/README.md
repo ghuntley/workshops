@@ -163,7 +163,7 @@ Your results may vary. In fact, they will! Try it yourselves.
 If you don't have `ncdu`, maybe you can install it. It's a good tool that makes
 sense to have available to your system, so maybe edit your
 `/etc/nixox/configuration.nix`, add it to your list of packages in 
-`environment.systemPackages` and then run `# nixos-rebuild --switch`.
+`environment.systemPackages` and then run `# nixos-rebuild switch`.
 
 But some of these paths may not be referenced by any package or profile. We can
 clean them with `nix-collect-garbage`:
