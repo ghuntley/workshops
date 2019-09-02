@@ -88,6 +88,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "adz",
+      "name": "Adam Davies",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/41101?v=4",
+      "profile": "http://adzdavies.blogspot.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
