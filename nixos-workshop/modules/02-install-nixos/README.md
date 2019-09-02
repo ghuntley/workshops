@@ -129,6 +129,8 @@ will contain our root and swap partitions.
 
 This code block assumes you’re still at a `fdisk` prompt.
 
+You can just choose 'p' for primary partition.
+
 ```bash
 # Create the boot partition
 Command: n
