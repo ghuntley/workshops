@@ -26,7 +26,6 @@ Throughout the workshop you'll encounter the following emoji — here's what the
 
 * Parts of this workshop incorporates work from [A Gentle Introduction to the Nix Family](https://ebzzry.io/en/nix/), [Nix by example](https://jameshfisher.com/2014/09/28/nix-by-example/) and [Getting started with Nix](http://qfpl.io/posts/nix/getting-started-with-nix).
 
-
 ## Contributing
 
 If you use this material to conduct your own workshop, please [share where it was used and feedback by creating a new issue][share-feedback] on GitHub. If you see a opportunity to improve the course ware please send in a pull-request.
