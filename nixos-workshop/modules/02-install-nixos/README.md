@@ -130,12 +130,11 @@ will contain our root and swap partitions.
 This code block assumes you’re still at a `fdisk` prompt.
 
 ```bash
-# Create the EFI boot partition
+# Create the boot partition
 Command: n
 Partition number: 1
 First sector: <enter for default>
 Last sector: +1G       --  make a 1 gigabyte partition
-Hex code or GUID: 83   -- this is the Linux type
 
 # Create the LVM partition
 Command: n
