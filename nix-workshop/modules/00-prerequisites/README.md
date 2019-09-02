@@ -8,6 +8,8 @@ Attendees will need a computer with either Linux, macOS or Windows 10 (with WSL 
 
 No configuration needed as the nix package manager is already installed! The whole operating system is built around it 🎉
 
+## ☑ Virtual Box
+
 If you are using an operating system other than NixOS you could use [Vagrant](https://www.vagrantup.com/docs/index.html) to provision and manage a NixOS VirtualBox machine which you can SSH into. Write out the the following Vagrantfile:
 
 ```ruby
