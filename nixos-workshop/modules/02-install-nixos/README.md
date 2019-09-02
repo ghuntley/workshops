@@ -26,7 +26,7 @@ and be comfortable with downloading upwards of 4Gb of data.
 
 ## 🎯 Install NixOS
 
-<-- 
+<!-- 
 <details><summary>✋🎯️ At the Melbourne :: C◦mp◦se 2019 Workshop we are running
 a NixOS proxy-cache for the workshop so that the class doesn't become
 bottlenecked by internet access speeds. The proxy-cache server name is
