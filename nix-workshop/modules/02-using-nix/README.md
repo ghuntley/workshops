@@ -600,18 +600,12 @@ but we’d normally just leave that until the next time that it occurred
 to us to run the garbage collector)
 
 What is `nix-shell` for? We normally use `nix-shell` when we’re
-developing new Nix packages - which is the topic of the [next
-post](../building-things-with-nix/).
-
-
-## Acknowledgements
-* Original material by Dave Laing on the Queensland Functional Programming Lab's
-  websitge as [Getting started with Nix].
-
+developing new Nix packages.
 
 ## 📚 Additional material
-* [Nixp manual]
 
+* [Nixp manual]
+* [Getting Started with Nix][getting-started-with-nix]
 
 ## ⏭️ What's next
 
@@ -621,5 +615,7 @@ But first, a short detour into [the Nix expression language].
 
 <!-- in-line links -->
 [Nix Manual]: https://nixos.org/nix/manual/
-[Getting started with Nix]: http://qfpl.io/posts/nix/getting-started-with-nix/
+
 [the Nix expression language]: ../03-the-nix-language/README.md
+
+[getting-started-with-nix]: http://qfpl.io/posts/nix/getting-started-with-nix/
