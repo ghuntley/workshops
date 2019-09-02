@@ -604,17 +604,16 @@ developing new Nix packages.
 
 ## 📚 Additional material
 
-* [Nixp manual]
-* [Getting Started with Nix][getting-started-with-nix]
+* [Nix Package Manager Guide][nix-manual].
+* [Getting Started with Nix][getting-started-with-nix].
 
 ## ⏭️ What's next
 
 Now we'd like to show you how to write packages for Nix.
 But first, a short detour into [the Nix expression language].
 
-
 <!-- in-line links -->
-[Nix Manual]: https://nixos.org/nix/manual/
+[nix-manual]: https://nixos.org/nix/manual/
 
 [the Nix expression language]: ../03-the-nix-language/README.md
 
