@@ -1,4 +1,4 @@
-# workshops [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors)
+# workshops [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors)
 
 
 # see also
@@ -33,6 +33,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/rubberydub"><img src="https://avatars3.githubusercontent.com/u/14562624?v=4" width="100px;" alt="Franz Luther Neulist Carroll"/><br /><sub><b>Franz Luther Neulist Carroll</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=rubberydub" title="Documentation">📖</a> <a href="https://github.com/ghuntley/workshops/commits?author=rubberydub" title="Code">💻</a></td>
     <td align="center"><a href="http://adzdavies.blogspot.com"><img src="https://avatars0.githubusercontent.com/u/41101?v=4" width="100px;" alt="Adam Davies"/><br /><sub><b>Adam Davies</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=adz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/nsfounder"><img src="https://avatars3.githubusercontent.com/u/21725?v=4" width="100px;" alt="Anthony Mittaz"/><br /><sub><b>Anthony Mittaz</b></sub></a><br /><a href="https://github.com/ghuntley/workshops/commits?author=sync" title="Documentation">📖</a></td>
   </tr>
 </table>
 
