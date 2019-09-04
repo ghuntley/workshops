@@ -304,7 +304,7 @@ new system. If something has gone wrong, don’t worry. You can always boot back
 into the installation media, mount your partitions, update the configuration,
 and install again. To mount existing partitions, you’ll need to decrypt the LVM
 partition and then activate its volume group. You will also need to mount 
-the UEFI boot partition we created. The snippet below uses `$BOOT_PARTITION` as
+the boot partition we created. The snippet below uses `$BOOT_PARTITION` as
 a placeholder. This was the first partition on the disk, and will probably be
 something like `/dev/sda1` or `/dev/nvme0n1p1`.
 
