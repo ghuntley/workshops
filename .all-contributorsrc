@@ -97,6 +97,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sync",
+      "name": "Anthony Mittaz",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21725?v=4",
+      "profile": "https://twitter.com/nsfounder",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
