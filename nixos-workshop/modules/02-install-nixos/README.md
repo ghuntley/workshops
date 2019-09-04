@@ -317,6 +317,7 @@ mount /dev/nixos-vg/root /mnt
 mount $BOOT_PARTITION /mnt/boot
 vim /mnt/etc/nixos/configuration.nix
 nixos-install
+```
 
 ## 📚 Additional reading material
 
