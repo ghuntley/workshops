@@ -67,7 +67,7 @@ imagine that, for whatever reason, the user needs to run a different version of
 Bash.
 
 ```bash
-$ nix-env -iA nixpkgs.bash
+$ nix-env -iA nixos.bash
 installing 'bash-4.4-p23'
 these paths will be fetched (0.51 MiB download, 2.47 MiB unpacked):
   /nix/store/6bqvbzjkcp9695dq0dpl5y43nvy37pq1-bash-4.4-p23-info
