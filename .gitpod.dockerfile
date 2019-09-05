@@ -1,7 +1,21 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-full:latest
 
-USER gitpod 
+# Install Nix
+USER root
+RUN addgroup --system nixbld \
+  && usermod -a -G nixbld gitpod \
+  && mkdir -m 0755 /nix && chown gitpod /nix \
+  && mkdir -p /etc/nix && echo 'sandbox = false' > /etc/nix/nix.conf
 
-RUN sudo apt-get update \
- && sudo curl https://nixos.org/nix/install | sh \
- && sudo rm -rf /var/lib/apt/lists/*
+CMD /bin/bash -l
+USER gitpod
+ENV USER gitpod
+WORKDIR /home/gitpod
+
+RUN touch .bash_profile && \
+  curl https://nixos.org/nix/install | sh
+
+RUN echo '. /home/gitpod/.nix-profile/etc/profile.d/nix.sh' >> /home/gitpod/.bashrc
+
+# Give back control
+USER root
