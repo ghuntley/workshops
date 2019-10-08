@@ -1,0 +1,3 @@
+[submodule "unoplatform"]
+	path = unoplatform-workshops
+	url = https://github.com/unoplatform/workshops.git
